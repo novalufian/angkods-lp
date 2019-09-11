@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap');
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$blue:    #0a4a8f !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$theme-colors: (
+    // "primary":    #0074e4,
+    "purple":    #614ad3,
+    "primary" :   #116BFE,
+    // "secondary":  #b0b0b0 ,
+    "secondary" : #9CA3C0,
+    "success":    #00bd56,
+    "info":       #93deff,
+    "warning":    #ffd933,
+    "danger":     #f30e5c,
+    "white":     #ffffff,
+    "light":      $light,
+    "dark":       $dark
+);
+
+$dark-color : #0F141A; 
+ 
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "_grid";
+@import "_sectionone";
+@import "_text";
+
+*{
+    outline : 0;
+    // color: #444444;
+    color : #3D425E;
+}
+
+body {
+    // font-family: 'Questrial', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+    // font-family: 'Quicksand', sans-serif;
+    // font-family: 'Fredoka One', cursive;
+    font-family: 'Varela Round', sans-serif;
+    background : #f7f7f7;
+    font-weight: 300;
+    // background: #0F141A;
+}
