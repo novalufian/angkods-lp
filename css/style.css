@@ -10932,8 +10932,8 @@ a.text-white:hover, a.text-white:focus {
   height: 100%;
   position: absolute;
   width: 75px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(100%, rgba(255, 255, 255, 0)), color-stop(0%, white));
-  background: linear-gradient(left, rgba(255, 255, 255, 0) 100%, white 0%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(100%, rgba(255, 255, 255, 0)), color-stop(0%, white));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 100%, white 0%);
   left: 0;
   top: 0;
 }
@@ -10943,10 +10943,39 @@ a.text-white:hover, a.text-white:focus {
   height: 100%;
   position: absolute;
   width: 75px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(100%, white), color-stop(0%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(left, white 100%, rgba(255, 255, 255, 0) 0%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(100%, white), color-stop(0%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(to left, white 100%, rgba(255, 255, 255, 0) 0%);
   right: 0;
   top: 0;
+}
+
+.page-section .ads-showcase {
+  white-space: nowrap;
+}
+
+.page-section .ads-showcase .showcase-item {
+  width: auto;
+  height: 75vh;
+  display: inline-block;
+}
+
+.page-section .ads-showcase .showcase-dot {
+  height: auto;
+  position: absolute;
+  bottom: 5%;
+}
+
+.page-section .ads-showcase .showcase-dot .dot-item {
+  width: 50px;
+  height: 10px;
+  background: #e5e5e5;
+  border-radius: 100px;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.page-section .ads-showcase .showcase-dot .dot-item.active {
+  background: #3D425E;
 }
 
 .mh-100 {
@@ -10955,6 +10984,62 @@ a.text-white:hover, a.text-white:focus {
 
 .mb-50 {
   margin-bottom: 50px !important;
+}
+
+.flex-auto {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.shadow-primary {
+  -webkit-box-shadow: 0 0 25px 10px rgba(17, 107, 254, 0.15);
+          box-shadow: 0 0 25px 10px rgba(17, 107, 254, 0.15);
+}
+
+.shadow-secondary {
+  -webkit-box-shadow: 0 0 25px 10px rgba(156, 163, 192, 0.15);
+          box-shadow: 0 0 25px 10px rgba(156, 163, 192, 0.15);
+}
+
+.shadow-success {
+  -webkit-box-shadow: 0 0 25px 10px rgba(0, 189, 86, 0.15);
+          box-shadow: 0 0 25px 10px rgba(0, 189, 86, 0.15);
+}
+
+.shadow-info {
+  -webkit-box-shadow: 0 0 25px 10px rgba(147, 222, 255, 0.15);
+          box-shadow: 0 0 25px 10px rgba(147, 222, 255, 0.15);
+}
+
+.shadow-warning {
+  -webkit-box-shadow: 0 0 25px 10px rgba(255, 217, 51, 0.15);
+          box-shadow: 0 0 25px 10px rgba(255, 217, 51, 0.15);
+}
+
+.shadow-danger {
+  -webkit-box-shadow: 0 0 25px 10px rgba(243, 14, 92, 0.15);
+          box-shadow: 0 0 25px 10px rgba(243, 14, 92, 0.15);
+}
+
+.shadow-light {
+  -webkit-box-shadow: 0 0 25px 10px rgba(248, 249, 250, 0.15);
+          box-shadow: 0 0 25px 10px rgba(248, 249, 250, 0.15);
+}
+
+.shadow-dark {
+  -webkit-box-shadow: 0 0 25px 10px rgba(52, 58, 64, 0.15);
+          box-shadow: 0 0 25px 10px rgba(52, 58, 64, 0.15);
+}
+
+.shadow-purple {
+  -webkit-box-shadow: 0 0 25px 10px rgba(97, 74, 211, 0.15);
+          box-shadow: 0 0 25px 10px rgba(97, 74, 211, 0.15);
+}
+
+.shadow-white {
+  -webkit-box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.15);
+          box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.15);
 }
 
 .shadow-text-big {
@@ -11088,6 +11173,10 @@ a.text-white:hover, a.text-white:focus {
 
 .text-dark {
   color: #233340;
+}
+
+.text-12 {
+  font-size: 12px;
 }
 
 .w900 {
@@ -11402,6 +11491,129 @@ a.text-white:hover, a.text-white:focus {
   }
 }
 
+.card {
+  border: none;
+  border-radius: 20px;
+  background: transparent;
+}
+
+.card.card-plan {
+  width: 30%;
+  min-height: 60%;
+  margin: 0 10px;
+}
+
+.card.card-plan .card-plan-title {
+  display: block;
+  padding: 10px 20px;
+  width: 50%;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+
+.card.card-plan .card-body {
+  padding: 20px;
+}
+
+.card.card-plan .card-footer {
+  border: none;
+  background: transparent;
+}
+
+.btn-rounded {
+  border-radius: 100px;
+}
+
+.btn-next-lp {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  -webkit-transform: rotate(90deg) translateY(-50%);
+          transform: rotate(90deg) translateY(-50%);
+  cursor: pointer;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.btn-next-lp:hover {
+  -webkit-transform: rotate(90deg) translateY(-50%) scale(1.05);
+          transform: rotate(90deg) translateY(-50%) scale(1.05);
+}
+
+.btn-prev-lp {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  -webkit-transform: rotate(-90deg) translateY(-50%);
+          transform: rotate(-90deg) translateY(-50%);
+  cursor: pointer;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.btn-prev-lp:hover {
+  -webkit-transform: rotate(-90deg) translateY(-50%) scale(1.05);
+          transform: rotate(-90deg) translateY(-50%) scale(1.05);
+}
+
+.inner-arrow {
+  width: 10px;
+  height: 30px;
+  position: absolute;
+  background: #ffffff;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(30deg);
+          transform: translateX(-50%) rotate(30deg);
+  top: 55%;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  border-radius: 100px;
+}
+
+.inner-arrow:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: 30px;
+  top: -2.5px;
+  background: inherit;
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  border-radius: 100px;
+  left: -5px;
+}
+
+.triangle {
+  position: relative;
+  width: 5em;
+  height: 5em;
+  border-top-right-radius: 80%;
+  background: #e5e5e5;
+  -webkit-transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+          transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+}
+
+.triangle:before, .triangle:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+  width: inherit;
+  height: inherit;
+  border-top-right-radius: inherit;
+}
+
+.triangle::before {
+  -webkit-transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
+          transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
+}
+
+.triangle::after {
+  -webkit-transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+          transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+}
+
 * {
   outline: 0;
   color: #3D425E;
@@ -11411,5 +11623,10 @@ body {
   font-family: 'Varela Round', sans-serif;
   background: #f7f7f7;
   font-weight: 300;
+}
+
+.img-responsive {
+  display: block;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

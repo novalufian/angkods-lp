@@ -1,0 +1,80 @@
+.btn-rounded{
+    border-radius: 100px;
+}
+
+.btn-next-lp{
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: rotate(90deg) translateY(-50%);
+    cursor: pointer;
+    transition: all .25s ease-in-out; 
+    &:hover{
+        transform: rotate(90deg) translateY(-50%) scale(1.05);
+    }
+}
+
+.btn-prev-lp{
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: rotate(-90deg) translateY(-50%);
+    cursor: pointer;
+    transition: all .25s ease-in-out; 
+    &:hover{
+        transform: rotate(-90deg) translateY(-50%) scale(1.05);
+    }
+}
+
+.inner-arrow{
+    width: 10px;
+    height: 30px;
+    position: absolute;
+    background: #ffffff;
+    left: 50%;
+    transform: translateX(-50%) rotate(30deg);
+    top: 55%;
+    transform-origin: top;
+    border-radius: 100px;
+    
+    &:after{
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: 30px;
+        top: -2.5px;
+        background: inherit;
+        transform: rotate(-60deg);
+        transform-origin: top right;
+        border-radius: 100px;
+        left: -5px;
+    }
+}
+
+.triangle{
+    position: relative;
+    width:  5em;
+    height: 5em;
+    border-top-right-radius: 80%;
+    background: #e5e5e5;
+    transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+    
+    
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: inherit;
+        width:  inherit;
+        height: inherit;
+        border-top-right-radius: inherit;
+    }
+    
+    &::before{
+        transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+    }
+    
+    &::after{
+        transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+    }
+}

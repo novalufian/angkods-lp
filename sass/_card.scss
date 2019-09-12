@@ -1,0 +1,31 @@
+.card{
+
+    border: none;
+    border-radius: 20px;
+    background: transparent;
+
+    &.card-plan{
+        width: 30%;
+        min-height: 60%; 
+        margin: 0 10px;
+
+        .card-plan-title{
+            display: block;
+            padding: 10px 20px;
+            width: 50%;
+            border-radius: 20px;
+            margin: 20px auto;
+        }
+
+        .card-body{
+            padding: 20px;
+        }
+
+        .card-footer{
+            border: none;
+            background: transparent;
+        }
+    }
+}
+
+

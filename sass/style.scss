@@ -42,6 +42,8 @@ $dark-color : #0F141A;
 @import "_text";
 @import "_navbar";
 @import "_animation";
+@import "_card";
+@import "_button";
 
 
 *{
@@ -60,4 +62,10 @@ body {
     background : #f7f7f7;
     font-weight: 300;
     // background: #0F141A;
+}
+
+
+.img-responsive {
+    display: block;
+    width: 100%;
 }
