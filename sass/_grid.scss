@@ -1,6 +1,48 @@
 .page-section{
-    min-height: 100vh;
     max-width: 100vw;
     overflow: hidden; 
     position: relative;
+    padding: 100px 50px;
+    box-sizing: border-box;
+
+    .partnership-img-wrapper{
+        white-space: nowrap;
+        margin: 50px auto;
+        overflow-x: hidden;
+        position: relative;
+
+        .item{
+            display: inline-block;
+            height: 75px;
+            margin: 0 15px;
+        }
+
+        &:before{
+            content: "";
+            height: 100%;
+            position: absolute;
+            width: 75px;
+            background: linear-gradient(left, rgba(255,255,255,0) 100%, rgba(255,255,255,1) 0%);
+            left: 0;
+            top: 0;
+        }
+
+        &:after{
+            content: "";
+            height: 100%;
+            position: absolute;
+            width: 75px;
+            background: linear-gradient(left, rgba(255,255,255,1) 100%, rgba(255,255,255,0) 0%);
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+.mh-100{
+    min-height: 100vh;
+}
+
+.mb-50{
+    margin-bottom: 50px !important;
 }

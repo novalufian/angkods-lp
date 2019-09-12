@@ -1,3 +1,43 @@
 .text-dark{
     color : #233340;
 }
+
+.w900{
+    font-weight: 900;
+}
+
+.section-title{
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: capitalize;
+    position: relative;
+    line-height: 1em;
+    @each $color, $value in $theme-colors {
+        &.text-#{$color} {
+            &:after{
+                content: "";
+                width: 15px;
+                height: 15px;
+                transform: rotate(45deg);
+                background: $value;
+                position: absolute;
+                top: 7.5px;
+                right: -35px;
+                border-radius: 5px;
+            }
+    
+            &:before{
+                content: "";
+                width: 15px;
+                height: 15px;
+                transform: rotate(45deg);
+                background: $value;
+                position: absolute;
+                top: 7.5px;
+                left: -35px;       
+                border-radius: 5px;
+            }
+        }
+    }
+
+}
