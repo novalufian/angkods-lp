@@ -10992,54 +10992,58 @@ a.text-white:hover, a.text-white:focus {
           flex: 0 0 auto;
 }
 
+.br-20 {
+  border-radius: 20px;
+}
+
 .shadow-primary {
-  -webkit-box-shadow: 0 0 25px 10px rgba(17, 107, 254, 0.15);
-          box-shadow: 0 0 25px 10px rgba(17, 107, 254, 0.15);
+  -webkit-box-shadow: 0 0 15px 5px rgba(17, 107, 254, 0.1);
+          box-shadow: 0 0 15px 5px rgba(17, 107, 254, 0.1);
 }
 
 .shadow-secondary {
-  -webkit-box-shadow: 0 0 25px 10px rgba(156, 163, 192, 0.15);
-          box-shadow: 0 0 25px 10px rgba(156, 163, 192, 0.15);
+  -webkit-box-shadow: 0 0 15px 5px rgba(156, 163, 192, 0.1);
+          box-shadow: 0 0 15px 5px rgba(156, 163, 192, 0.1);
 }
 
 .shadow-success {
-  -webkit-box-shadow: 0 0 25px 10px rgba(0, 189, 86, 0.15);
-          box-shadow: 0 0 25px 10px rgba(0, 189, 86, 0.15);
+  -webkit-box-shadow: 0 0 15px 5px rgba(0, 189, 86, 0.1);
+          box-shadow: 0 0 15px 5px rgba(0, 189, 86, 0.1);
 }
 
 .shadow-info {
-  -webkit-box-shadow: 0 0 25px 10px rgba(147, 222, 255, 0.15);
-          box-shadow: 0 0 25px 10px rgba(147, 222, 255, 0.15);
+  -webkit-box-shadow: 0 0 15px 5px rgba(147, 222, 255, 0.1);
+          box-shadow: 0 0 15px 5px rgba(147, 222, 255, 0.1);
 }
 
 .shadow-warning {
-  -webkit-box-shadow: 0 0 25px 10px rgba(255, 217, 51, 0.15);
-          box-shadow: 0 0 25px 10px rgba(255, 217, 51, 0.15);
+  -webkit-box-shadow: 0 0 15px 5px rgba(255, 217, 51, 0.1);
+          box-shadow: 0 0 15px 5px rgba(255, 217, 51, 0.1);
 }
 
 .shadow-danger {
-  -webkit-box-shadow: 0 0 25px 10px rgba(243, 14, 92, 0.15);
-          box-shadow: 0 0 25px 10px rgba(243, 14, 92, 0.15);
+  -webkit-box-shadow: 0 0 15px 5px rgba(243, 14, 92, 0.1);
+          box-shadow: 0 0 15px 5px rgba(243, 14, 92, 0.1);
 }
 
 .shadow-light {
-  -webkit-box-shadow: 0 0 25px 10px rgba(248, 249, 250, 0.15);
-          box-shadow: 0 0 25px 10px rgba(248, 249, 250, 0.15);
+  -webkit-box-shadow: 0 0 15px 5px rgba(248, 249, 250, 0.1);
+          box-shadow: 0 0 15px 5px rgba(248, 249, 250, 0.1);
 }
 
 .shadow-dark {
-  -webkit-box-shadow: 0 0 25px 10px rgba(52, 58, 64, 0.15);
-          box-shadow: 0 0 25px 10px rgba(52, 58, 64, 0.15);
+  -webkit-box-shadow: 0 0 15px 5px rgba(52, 58, 64, 0.1);
+          box-shadow: 0 0 15px 5px rgba(52, 58, 64, 0.1);
 }
 
 .shadow-purple {
-  -webkit-box-shadow: 0 0 25px 10px rgba(97, 74, 211, 0.15);
-          box-shadow: 0 0 25px 10px rgba(97, 74, 211, 0.15);
+  -webkit-box-shadow: 0 0 15px 5px rgba(97, 74, 211, 0.1);
+          box-shadow: 0 0 15px 5px rgba(97, 74, 211, 0.1);
 }
 
 .shadow-white {
-  -webkit-box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.15);
-          box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.1);
 }
 
 .shadow-text-big {
@@ -11495,6 +11499,17 @@ a.text-white:hover, a.text-white:focus {
   border: none;
   border-radius: 20px;
   background: transparent;
+  margin: 20px 0;
+}
+
+.card.grid-lp {
+  border-radius: 0px;
+  margin: -1px -1px 0 0;
+  border: solid 1px rgba(236, 236, 236, 0.5);
+}
+
+.card.grid-lp.no-border {
+  border: none;
 }
 
 .card.card-plan {
@@ -11612,6 +11627,133 @@ a.text-white:hover, a.text-white:focus {
 .triangle::after {
   -webkit-transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
           transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+}
+
+.icon {
+  margin: 15px;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+}
+
+.icon.icon-primary {
+  background: rgba(17, 107, 254, 0.1);
+  padding: 20px;
+  border-radius: 100px;
+  color: #116BFE;
+}
+
+.icon.icon-primary i {
+  color: #116BFE;
+}
+
+.icon.icon-secondary {
+  background: rgba(156, 163, 192, 0.1);
+  padding: 20px;
+  border-radius: 100px;
+  color: #9CA3C0;
+}
+
+.icon.icon-secondary i {
+  color: #9CA3C0;
+}
+
+.icon.icon-success {
+  background: rgba(0, 189, 86, 0.1);
+  padding: 20px;
+  border-radius: 100px;
+  color: #00bd56;
+}
+
+.icon.icon-success i {
+  color: #00bd56;
+}
+
+.icon.icon-info {
+  background: rgba(147, 222, 255, 0.1);
+  padding: 20px;
+  border-radius: 100px;
+  color: #93deff;
+}
+
+.icon.icon-info i {
+  color: #93deff;
+}
+
+.icon.icon-warning {
+  background: rgba(255, 217, 51, 0.1);
+  padding: 20px;
+  border-radius: 100px;
+  color: #ffd933;
+}
+
+.icon.icon-warning i {
+  color: #ffd933;
+}
+
+.icon.icon-danger {
+  background: rgba(243, 14, 92, 0.1);
+  padding: 20px;
+  border-radius: 100px;
+  color: #f30e5c;
+}
+
+.icon.icon-danger i {
+  color: #f30e5c;
+}
+
+.icon.icon-light {
+  background: rgba(248, 249, 250, 0.1);
+  padding: 20px;
+  border-radius: 100px;
+  color: #f8f9fa;
+}
+
+.icon.icon-light i {
+  color: #f8f9fa;
+}
+
+.icon.icon-dark {
+  background: rgba(52, 58, 64, 0.1);
+  padding: 20px;
+  border-radius: 100px;
+  color: #343a40;
+}
+
+.icon.icon-dark i {
+  color: #343a40;
+}
+
+.icon.icon-purple {
+  background: rgba(97, 74, 211, 0.1);
+  padding: 20px;
+  border-radius: 100px;
+  color: #614ad3;
+}
+
+.icon.icon-purple i {
+  color: #614ad3;
+}
+
+.icon.icon-white {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 100px;
+  color: #ffffff;
+}
+
+.icon.icon-white i {
+  color: #ffffff;
 }
 
 * {

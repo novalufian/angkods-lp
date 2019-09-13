@@ -1,0 +1,25 @@
+.icon{
+    margin: 15px;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+
+    @each $color, $value in $theme-colors {
+        &.icon-#{$color}{
+            background : rgba($color:$value, $alpha: .1);
+            padding: 20px;
+            border-radius: 100px;
+            color: $value;
+            // box-shadow: 0 0 0 10px rgba($color:$value, $alpha: .2),
+            //             0 0 10px 20px rgba($color:$value, $alpha: .1);
+
+            i{
+                color: $value;
+            }
+        }
+    }
+}

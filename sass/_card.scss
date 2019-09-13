@@ -3,6 +3,17 @@
     border: none;
     border-radius: 20px;
     background: transparent;
+    margin: 20px 0;
+
+    &.grid-lp{
+        border-radius: 0px;
+        margin: -1px -1px 0 0;
+        border: solid 1px rgba(#ececec, .5);
+
+        &.no-border{
+            border: none;
+        }
+    }
 
     &.card-plan{
         width: 30%;
