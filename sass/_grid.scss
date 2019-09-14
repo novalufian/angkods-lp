@@ -21,8 +21,8 @@
             content: "";
             height: 100%;
             position: absolute;
-            width: 75px;
-            background: linear-gradient(to left, rgba(255,255,255,0) 100%, rgba(255,255,255,1) 0%);
+            width: 150px;
+            background: linear-gradient(right, rgba(255,255,255,1) 100%, rgba(255,255,255,0) 0%);
             left: 0;
             top: 0;
         }
@@ -31,8 +31,8 @@
             content: "";
             height: 100%;
             position: absolute;
-            width: 75px;
-            background: linear-gradient(to left, rgba(255,255,255,1) 100%, rgba(255,255,255,0) 0%);
+            width: 150px;
+            background: linear-gradient(right, rgba(255,255,255,0) 100%, rgba(255,255,255,1) 0%);
             right: 0;
             top: 0;
         }
@@ -45,6 +45,59 @@
             width: auto;
             height: 75vh;
             display: inline-block;
+            z-index: 10;
+
+            .main-wrapper{
+                width: 500px;
+                height: 100%;
+                position: relative;
+
+                &.rounded{
+                    border-radius: 20px !important;
+                }
+
+                .brand-logo{
+                    position: absolute;
+                    min-width: 150px;
+                    height: 75px;
+                    border-radius: 20px;
+                    left: 0;
+                    transform: translateX(-50%);
+                    top: 40px;
+
+                    // &:after{
+                    //     content: "";
+                    //     position: absolute;
+                    //     width: 50px;
+                    //     height: 50px;
+                    //     border: solid 5px rgba(theme-color("primary"), .2);
+                    //     border-radius: 100%;
+                    //     left: -100%;
+                    //     top: -50px;
+                    // }
+
+                    // &:before{
+                    //     content: "";
+                    //     position: absolute;
+                    //     width: 200px;
+                    //     height: 200px;
+                    //     border-radius: 100%;
+                    //     left: -10%;
+                    //     bottom: 10%;
+                    //     border: solid 20px rgba(theme-color("secondary"), .2);
+                    //     z-index: 0;
+                    // }
+                }
+
+                .desc{
+                    position: absolute;
+                    width: 200px;
+                    height: 200px;
+                    bottom: 50px;
+                    right: -100px;
+                    border-radius: 20px;
+                }
+            }
         }
 
         .showcase-dot{
@@ -66,6 +119,61 @@
             }
         }
     }
+
+    .title-big{
+        font-family: 'Fredoka One', cursive;
+        font-size: 4em;
+        width: 60%;
+    }
+
+    .subscribe-mail{
+        padding-top: 25vh;
+        position: relative;
+        box-sizing: border-box;
+        img{
+            position: absolute;
+            width: 40%;
+            bottom: 10%;
+            right: 0;
+        }
+
+        .form-subscribe{
+            margin-top: 75px;
+            position: relative;
+            z-index: 10;
+            input{
+                border-radius: 0px;
+            }
+            button{
+                border-radius: 0px;
+                padding : 6px 15px;
+                border: none;
+                border-right: solid 10px theme-color("danger");
+                i{
+                    margin-left: 15px;
+                }
+            }
+
+            &:after{
+                content: "* your email is fully secore with us, don't worry.";
+                position: absolute;
+                top: 50px;
+                left: 0px;
+                font-size: 12px;
+                color: rgba(theme-color("secondary"), .5);
+            }
+        }
+
+        
+    }
+
+    svg.sparator{
+        position: absolute;
+        width: 100%;
+        bottom: -10px;
+        z-index: 0;
+        border: none;
+    }
 }
 
 .mh-100{
@@ -84,8 +192,31 @@
     border-radius: 20px;
 }
 
+.no-padding{
+    padding: 0px !important; 
+}
+
+.no-margin{
+    margin: 0px !important;
+}
+
 @each $color, $value in $theme-colors {
     .shadow-#{$color}{
         box-shadow: 0 0 15px 5px rgba($color:$value, $alpha: .1);
+    }
+}
+
+.bg-img-dataset{
+    background-size: cover;
+    
+    &:before{
+        content: "";
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // background: linear-gradient(top, rgba(255,255, 255, 1) 0%, rgba(255,255, 255, 0) 100% );
+        // background: #ffff;
     }
 }
