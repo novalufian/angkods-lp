@@ -15,6 +15,10 @@
     font-family: 'Fredoka One', cursive;
 }
 
+.righteous{
+    font-family: 'Righteous', cursive;
+}
+
 .section-title{
     font-size: 2em;
     font-weight: 900;
@@ -49,4 +53,10 @@
         }
     }
 
+}
+
+@each $color, $value in $theme-colors {
+    .text-shadow-#{$color}{
+        text-shadow: 0 10px 15px rgba($color:$value, $alpha: .25);
+    }
 }

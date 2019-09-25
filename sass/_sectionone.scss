@@ -5,7 +5,7 @@
     top: 5vh;
     left: 15%;
     font-weight: 900;
-    letter-spacing: -.1em;
+    letter-spacing: -.05em;
     color: rgba($color: theme-color("secondary"), $alpha: .075);
 
 }
@@ -116,5 +116,51 @@
     .item{
         height: 50px;
         margin-left: 20px;
+    }
+}
+
+
+.opening{
+    position: absolute;
+    font-size: 10em;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 10;
+    &:after{
+        content : "";
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        background: #ed1250;
+        left: 0;
+        transform: translateX(120%);
+        border-radius: 100%;
+        z-index:-1;
+    }
+}
+
+.ads-banner{
+    background: #448ef6;
+    width: 400px;
+    height: 120px;
+    border-radius: 20px;
+
+    p{
+        font-size: 4em;
+        line-height: 1.2em;
+    }
+}
+
+.service-section{
+    .card{
+        .title{
+            font-size: 1.1em;
+            line-height: 1em;
+            margin: 10px auto;
+            width: 150px;
+        }
     }
 }
