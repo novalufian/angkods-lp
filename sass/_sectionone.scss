@@ -156,7 +156,40 @@
 
 .service-section{
     .card{
+        cursor: pointer;
+
+        img{
+            transition: all .5s ease-in-out;
+            position: relative;
+            z-index: 10;
+
+        }
+
+        .shadow{
+            width: 50%;
+            height: 50%;
+            background: #00000010;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            transform: translate(50%,25%);
+            border-radius: 100%;
+            filter: blur(30px);
+        }
+
+        &:hover{
+            img{
+                transform: scale(1.2);
+            }
+
+            .title{
+                font-weight: 900;
+            }
+        }
+
         .title{
+            transition: all .5s ease-in-out;
             font-size: 1.1em;
             line-height: 1em;
             margin: 10px auto;

@@ -11322,7 +11322,44 @@ a.text-white:hover, a.text-white:focus {
   line-height: 1.2em;
 }
 
+.service-section .card {
+  cursor: pointer;
+}
+
+.service-section .card img {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+
+.service-section .card .shadow {
+  width: 50%;
+  height: 50%;
+  background: #00000010;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  -webkit-transform: translate(50%, 25%);
+          transform: translate(50%, 25%);
+  border-radius: 100%;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+}
+
+.service-section .card:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.service-section .card:hover .title {
+  font-weight: 900;
+}
+
 .service-section .card .title {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   font-size: 1.1em;
   line-height: 1em;
   margin: 10px auto;
