@@ -11999,6 +11999,10 @@ a.text-white:hover, a.text-white:focus {
   margin: 25px 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   outline: 0;
   color: #3D425E;

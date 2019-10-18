@@ -47,6 +47,9 @@ $dark-color : #0F141A;
 @import "_button";
 @import "_icon";
 
+html{
+    scroll-behavior: smooth;
+}
 
 *{
     outline : 0;
