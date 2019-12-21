@@ -11366,6 +11366,18 @@ a.text-white:hover, a.text-white:focus {
   width: 150px;
 }
 
+#about-us {
+  background: #f9f9f9 !important;
+}
+
+#faq {
+  background: #08ffc8 !important;
+}
+
+#plan {
+  background: #fff6da !important;
+}
+
 .text-dark {
   color: #233340;
 }
@@ -11702,6 +11714,11 @@ a.text-white:hover, a.text-white:focus {
   text-decoration: none;
   color: #3D425E;
   font-weight: 900;
+}
+
+nav#main-navbar {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 @-webkit-keyframes up-down {

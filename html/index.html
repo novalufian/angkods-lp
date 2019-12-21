@@ -98,7 +98,7 @@
             <h5 class="w900 text-center">more than <span class="text-primary">1.000.000 brand</span>, trust with us</h5>
             <div class="d-flex justify-content-center mb-50">
                 <div class="col-md-8 text-secondary text-center">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum dolores, quam ratione consequatur eum maxime quos, hic magni harum quaerat vitae.
+                    join with us for every single opportunity to make your business known by everybody and make it grow fast.
                 </div>
             </div>
             
@@ -119,8 +119,8 @@
         
         <div class="container ">
             <div class="row d-flex">
-                <div class="col-md-6 card  no-margin">
-                    <div class="card-body bg-white br-20 shadow-white  row">
+                <div class="col-md-6 card  no-margin flat">
+                    <div class="card-body br-20 shadow-white  row">
                         <div class="d-flex justify-content-center align-items-start flex-column text-left">
                             <h3 class="w900 text-right">Services.</h3>
                             <p class="text-right">Lorem ipsum, dolor sit mollitia?</p>
@@ -128,73 +128,73 @@
                     </div>
                 </div>
                 <div class="col-md-3 card no-margin" > 
-                    <div class="card-body bg-white br-20 shadow-white text-center">
+                    <div class="card-body br-20 shadow-white text-center">
                         <img class="col-md-8 service-icon" src="../img/svg/013-expand-1.svg" > 
                         <p class="title text-normal w900">wide coverage area</p>
                         <p class="text-secondary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            very wide coverage area throughout Indonesia.
                         </p>
                     </div>
                 </div>
                 
                 <div class="col-md-3 card no-margin">
-                    <div class="card-body bg-white br-20 shadow-white text-center">
+                    <div class="card-body br-20 shadow-white text-center">
                         <img class="col-md-8 service-icon" src="../img/svg/008-save-4.svg" > 
                         <span class="shadow"></span>
                         <p class="title text-normal w900">save your money</p>
                         <p class="text-secondary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            lower advertising costs.
                         </p>
                     </div>
                 </div>
                 
                 <div class="col-md-3 card no-margin">
-                    <div class="card-body bg-white br-20 shadow-white text-center">
+                    <div class="card-body br-20 shadow-white text-center">
                         <img class="col-md-8 service-icon" src="../img/svg/054-pinwheel.svg" > 
                         <p class="title text-normal w900">a lot of creative banner</p>
                         <p class="text-secondary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            various forms of advertising that we can present.
                         </p>
                     </div>
                 </div>
                 
                 <div class="col-md-3 card no-margin">
-                    <div class="card-body bg-white br-20 shadow-white text-center">
+                    <div class="card-body br-20 shadow-white text-center">
                         <img class="col-md-8 service-icon" src="../img/svg/035-cctv-8.svg" > 
                         <p class="title text-normal w900">easy monitoring</p>
                         <p class="text-secondary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            You can monitor advertisements in real time easily.
                         </p>
                     </div>
                 </div>
                 
                 <div class="col-md-3 card no-margin">
-                    <div class="card-body bg-white br-20 shadow-white text-center">
+                    <div class="card-body br-20 shadow-white text-center">
                         <img class="col-md-8 service-icon" src="../img/svg/003-sports-and-competition.svg" > 
                         <p class="title text-normal w900">best quality display</p>
                         <p class="text-secondary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            We use the best material for each ad that is posted.
                         </p>
                     </div>
                 </div>
                 
                 <div class="col-md-3 card no-margin">
-                    <div class="card-body bg-white br-20 shadow-white text-center">
+                    <div class="card-body br-20 shadow-white text-center">
                         <img class="col-md-8 service-icon" src="../img/svg/015-ad.svg" > 
                         <p class="title text-normal w900">flexible ads display</p>
                         <p class="text-secondary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            quickly and easily in changing advertising materials as needed.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3 grid-lp no-border"></div>
                 
                 <div class="col-md-3 card no-margin">
-                    <div class="card-body bg-white br-20 shadow-white text-center">
+                    <div class="card-body br-20 shadow-white text-center">
                         <img class="col-md-8 service-icon" src="../img/svg/024-map.svg" > 
                         <p class="title text-normal w900">easy set target area</p>
                         <p class="text-secondary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            easy set target area only in blink of an eye.
                         </p>
                     </div>
                 </div>
@@ -338,12 +338,43 @@
             var node = document.documentElement || document.body;
             var _scrollTop = node.scrollTop;
 
+            
+
             if(_scrollTop > screen.height){
-                document.getElementById("main-navbar").classList.add("bg-white");
+                // document.getElementById("main-navbar").classList.add("bg-white");
             }else{
                 document.getElementById("main-navbar").classList.remove("bg-white");
             }
+
+            onVIewport("home");
+            onVIewport("partnership");
+            onVIewport("about-us");
+            onVIewport("plan");
+            onVIewport("show-case");
+            onVIewport("faq");
         })
+
+        function onVIewport(elementid) {
+            var div = document.getElementById(elementid);
+            var rect = div.getBoundingClientRect();
+            w = rect.width;
+            h = rect.height;
+            x = window.innerHeight - (h / 2);
+            t = rect.top < (0+ 50 ) && rect.top > (50 - h);
+
+            /* check div on 50 viewport */
+            if(t){
+                if(elementid == "home"){
+                    document.getElementById("main-navbar").style.background = "unset";
+
+                }else{
+                    document.getElementById("main-navbar").style.background =window.getComputedStyle(div).getPropertyValue("background-color");
+                }
+            }
+            
+                // console.log(t + " "+ rect.bottom + " "+rect.height)
+          
+        }
     </script>
     
 </body>
