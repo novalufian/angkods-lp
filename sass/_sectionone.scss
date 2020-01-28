@@ -6,7 +6,7 @@
     left: 15%;
     font-weight: 900;
     letter-spacing: -.05em;
-    color: rgba($color: theme-color("secondary"), $alpha: .075);
+    color: rgba($color: theme-color("secondary"), $alpha: .1);
 
 }
 
@@ -60,7 +60,7 @@
             box-shadow: 0 0 25px 10px rgba($color:#a8ff3e, $alpha: .15);
         }
 
-        &:after{
+        .bg-shadow-2{
             content: "";
             position: absolute;
             width: 250px;
@@ -73,11 +73,13 @@
             // animation: up-down 4s infinite;
         } 
 
-        &:before{
+        .bg-shadow-3{
             content: "";
             position: absolute;
             width: 250px;
             height: 100%;
+            top: 20px;
+            left: 0px;
             border-radius: 20px;
             background: #fb0091;
             transform: translateX(20%) rotate(40deg);
@@ -119,7 +121,6 @@
     }
 }
 
-
 .opening{
     position: absolute;
     font-size: 10em;
@@ -129,18 +130,61 @@
     bottom: 0;
     text-align: center;
     z-index: 10;
-    &:after{
-        content : "";
-        width: 500px;
-        height: 500px;
+    opacity: 0;
+    overflow: hidden;
+
+    background-color: #212121;
+    // background-image: url(https://malangvoice.com/wp-content/uploads/2017/01/Terminal-Kota-Batu-yang-sudah-diambil-Provinsi-Jawa-Timur.Miski_.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-blend-mode: overlay;
+
+    // &:after{
+    //     content : "";
+    //     width: 500px;
+    //     height: 500px;
+    //     position: absolute;
+    //     background: #ed1250;
+    //     left: 0;
+    //     transform: translateX(120%);
+    //     border-radius: 100%;
+    //     z-index:-1;
+    // }
+
+    #bg-section-two{
         position: absolute;
-        background: #ed1250;
-        left: 0;
-        transform: translateX(120%);
+        width: 10px;
+        height: 10px;
+        z-index: -1;
         border-radius: 100%;
-        z-index:-1;
+    }
+
+    #section-two-opening-1{
+        position: relative;
+        opacity: 0;
+    }
+
+    span.greating{
+        width: 100%;
+        opacity: 0;
+        display: none;
+
+        &#section-two-opening-2{
+            transform: translate(0px, -200px);
+
+            span{
+                opacity: 0;
+                transform: translate(-100px, 0px);
+            }
+        }
+
+        &#section-two-opening-3{
+            transform: translate(-100px, 0px);
+        }
     }
 }
+
+
 
 .ads-banner{
     background: #448ef6;

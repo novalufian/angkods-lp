@@ -5,6 +5,8 @@
 @import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11165,7 +11167,7 @@ a.text-white:hover, a.text-white:focus {
   left: 15%;
   font-weight: 900;
   letter-spacing: -.05em;
-  color: rgba(156, 163, 192, 0.075);
+  color: rgba(156, 163, 192, 0.1);
 }
 
 #section-1-big-title {
@@ -11225,7 +11227,7 @@ a.text-white:hover, a.text-white:focus {
           box-shadow: 0 0 25px 10px rgba(168, 255, 62, 0.15);
 }
 
-#section-1-big-img .main-big-img:after {
+#section-1-big-img .main-big-img .bg-shadow-2 {
   content: "";
   position: absolute;
   width: 250px;
@@ -11239,11 +11241,13 @@ a.text-white:hover, a.text-white:focus {
           box-shadow: 0 0 25px 10px rgba(0, 209, 205, 0.15);
 }
 
-#section-1-big-img .main-big-img:before {
+#section-1-big-img .main-big-img .bg-shadow-3 {
   content: "";
   position: absolute;
   width: 250px;
   height: 100%;
+  top: 20px;
+  left: 0px;
   border-radius: 20px;
   background: #fb0091;
   -webkit-transform: translateX(20%) rotate(40deg);
@@ -11295,19 +11299,44 @@ a.text-white:hover, a.text-white:focus {
   bottom: 0;
   text-align: center;
   z-index: 10;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #212121;
 }
 
-.opening:after {
-  content: "";
-  width: 500px;
-  height: 500px;
+.opening #bg-section-two {
   position: absolute;
-  background: #ed1250;
-  left: 0;
-  -webkit-transform: translateX(120%);
-          transform: translateX(120%);
-  border-radius: 100%;
+  width: 10px;
+  height: 10px;
   z-index: -1;
+  border-radius: 100%;
+}
+
+.opening #section-two-opening-1 {
+  position: relative;
+  opacity: 0;
+}
+
+.opening span.greating {
+  width: 100%;
+  opacity: 0;
+  display: none;
+}
+
+.opening span.greating#section-two-opening-2 {
+  -webkit-transform: translate(0px, -200px);
+          transform: translate(0px, -200px);
+}
+
+.opening span.greating#section-two-opening-2 span {
+  opacity: 0;
+  -webkit-transform: translate(-100px, 0px);
+          transform: translate(-100px, 0px);
+}
+
+.opening span.greating#section-two-opening-3 {
+  -webkit-transform: translate(-100px, 0px);
+          transform: translate(-100px, 0px);
 }
 
 .ads-banner {
@@ -11713,7 +11742,7 @@ a.text-white:hover, a.text-white:focus {
 .navbar-nav .nav-item a {
   text-decoration: none;
   color: #3D425E;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 nav#main-navbar {
@@ -12026,7 +12055,7 @@ html {
 }
 
 body {
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: #f7f7f7;
   font-weight: 300;
 }
