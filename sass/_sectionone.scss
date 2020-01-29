@@ -1,3 +1,7 @@
+.intro-section{
+    // background-image: linear-gradient( 109.6deg,  rgba(104,183,249,1) 31.3%, rgba(176,248,200,1) 100.2% );
+}
+
 .shadow-text-big{
     position: absolute;
     z-index: 0;
@@ -7,7 +11,7 @@
     font-weight: 900;
     letter-spacing: -.05em;
     color: rgba($color: theme-color("secondary"), $alpha: .1);
-
+    
 }
 
 #section-1-big-title{
@@ -28,14 +32,14 @@
     width: 500px;
     height: 75vh;
     right: 7.5%;
-
+    
     .main-big-img{
         position: relative;
         width: 250px;
         height: 70%;
         margin: 15% auto;
         border-radius: 20px;
-
+        
         img{
             position: relative;
             display: block;
@@ -46,7 +50,7 @@
             box-shadow: 0 0 15px 10px rgba($color: theme-color("secondary"), $alpha: .25);
             animation : up-down 5s infinite; 
         }
-
+        
         .bg-shadow{
             content: "asd";
             position: absolute;
@@ -59,7 +63,7 @@
             z-index: 9;
             box-shadow: 0 0 25px 10px rgba($color:#a8ff3e, $alpha: .15);
         }
-
+        
         .bg-shadow-2{
             content: "";
             position: absolute;
@@ -72,7 +76,7 @@
             box-shadow: 0 0 25px 10px rgba($color:#00d1cd, $alpha: .15);
             // animation: up-down 4s infinite;
         } 
-
+        
         .bg-shadow-3{
             content: "";
             position: absolute;
@@ -131,125 +135,159 @@
     text-align: center;
     z-index: 10;
     opacity: 0;
+    margin: 0;
     overflow: hidden;
-
-    background-color: #212121;
-    // background-image: url(https://malangvoice.com/wp-content/uploads/2017/01/Terminal-Kota-Batu-yang-sudah-diambil-Provinsi-Jawa-Timur.Miski_.jpg);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-blend-mode: overlay;
-
+    // background: linear-gradient( 109.6deg,  rgba(229,68,121,1) 11.2%, rgba(157,55,206,1) 91.2% );
+    // background-image: linear-gradient( 109.6deg,  rgba(104,183,249,1) 31.3%, rgba(176,248,200,1) 100.2% );
+    background-image: url(https://images.pexels.com/photos/2261702/pexels-photo-2261702.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     // &:after{
-    //     content : "";
-    //     width: 500px;
-    //     height: 500px;
-    //     position: absolute;
-    //     background: #ed1250;
-    //     left: 0;
-    //     transform: translateX(120%);
-    //     border-radius: 100%;
-    //     z-index:-1;
-    // }
-
-    #bg-section-two{
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        z-index: -1;
-        border-radius: 100%;
-    }
-
-    #section-two-opening-1{
-        position: relative;
-        opacity: 0;
-    }
-
-    span.greating{
-        width: 100%;
-        opacity: 0;
-        display: none;
-
-        &#section-two-opening-2{
-            transform: translate(0px, -200px);
-
-            span{
-                opacity: 0;
-                transform: translate(-100px, 0px);
-            }
-        }
-
-        &#section-two-opening-3{
-            transform: translate(-100px, 0px);
-        }
-    }
-}
-
-
-
-.ads-banner{
-    background: #448ef6;
-    width: 400px;
-    height: 120px;
-    border-radius: 20px;
-
-    p{
-        font-size: 4em;
-        line-height: 1.2em;
-    }
-}
-
-.service-section{
-    .card{
-        cursor: pointer;
-
-        img{
-            transition: all .5s ease-in-out;
-            position: relative;
-            z-index: 10;
-
-        }
-
-        .shadow{
-            width: 50%;
-            height: 50%;
-            background: #00000010;
+        //     content : "";
+        //     width: 500px;
+        //     height: 500px;
+        //     position: absolute;
+        //     background: #ed1250;
+        //     left: 0;
+        //     transform: translateX(120%);
+        //     border-radius: 100%;
+        //     z-index:-1;
+        // }
+        
+        #bg-section-two{
             position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            transform: translate(50%,25%);
+            width: 10px;
+            height: 10px;
+            z-index: -1;
             border-radius: 100%;
-            filter: blur(30px);
         }
-
-        &:hover{
-            img{
-                transform: scale(1.2);
-            }
-
-            .title{
-                font-weight: 900;
-            }
+        
+        #section-two-opening-1{
+            position: relative;
+            opacity: 0;
+            display: none;
+            letter-spacing: 50px;
         }
+        
+        span.greating{
+            width: 100%;
+            opacity: 0;
+            display: none;
+            text-transform: lowercase;
+            text-shadow: 1px 5px 25px #21212130;
+            
+            &#section-two-opening-2{
+                opacity: .15;
+                letter-spacing: 50px;
+                span{
+                    opacity: .15;
+                }
+            }
+            
+            &#section-two-opening-3{
+                position: relative;
+                text-transform: capitalize;
+                letter-spacing: 50px;
+                width: auto;
+                padding: 0 50px;
+                background-image: linear-gradient( 109.6deg,  rgba(104,183,249,1) 31.3%, rgba(176,248,200,1) 100.2% );
+                
+                &:after{
+                    content: "ANGKODS";
+                    position: absolute;
+                    top: 50%;
+                    font-size: 3.5em;
+                    left: 50%;
+                    z-index: -1;
+                    opacity: .15;
+                    transform: translate(-50%,-50%);
+                    color : #353742;
+                }
 
-        .title{
-            transition: all .5s ease-in-out;
-            font-size: 1.1em;
-            line-height: 1em;
-            margin: 10px auto;
-            width: 150px;
+                &:before{
+                    content: "advertising agency";
+                    position: absolute;
+                    font-size: 20px;
+                    color: black;
+                    transform: translate(0, 50px);
+                    letter-spacing: 1px;
+                    right: 50px;
+                    bottom: 0px;
+                    z-index: -1;
+                    background: yellow;
+                    padding: 5px 20px;
+                }
+            }
         }
     }
-}
-
-#about-us{
-    background: #f9f9f9 !important;
-}
-
-#faq{
-    background: #08ffc8 !important;
-}
-
-#plan{
-    background: #fff6da !important;
-}
+    
+    
+    
+    .ads-banner{
+        background: #448ef6;
+        width: 400px;
+        height: 120px;
+        border-radius: 20px;
+        
+        p{
+            font-size: 4em;
+            line-height: 1.2em;
+        }
+    }
+    
+    .service-section{
+        .card{
+            cursor: pointer;
+            
+            img{
+                transition: all .5s ease-in-out;
+                position: relative;
+                z-index: 10;
+                
+            }
+            
+            .shadow{
+                width: 50%;
+                height: 50%;
+                background: #00000010;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+                transform: translate(50%,25%);
+                border-radius: 100%;
+                filter: blur(30px);
+            }
+            
+            &:hover{
+                img{
+                    transform: scale(1.2);
+                }
+                
+                .title{
+                    font-weight: 900;
+                }
+            }
+            
+            .title{
+                transition: all .5s ease-in-out;
+                font-size: 1.1em;
+                line-height: 1em;
+                margin: 10px auto;
+                width: 150px;
+            }
+        }
+    }
+    
+    #about-us{
+        background: #f9f9f9 !important;
+    }
+    
+    #faq{
+        background: #08ffc8 !important;
+    }
+    
+    #plan{
+        background: #fff6da !important;
+    }

@@ -7,6 +7,8 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Yellowtail&display=swap");
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11300,8 +11302,11 @@ a.text-white:hover, a.text-white:focus {
   text-align: center;
   z-index: 10;
   opacity: 0;
+  margin: 0;
   overflow: hidden;
-  background-color: #212121;
+  background-image: url(https://images.pexels.com/photos/2261702/pexels-photo-2261702.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .opening #bg-section-two {
@@ -11315,28 +11320,62 @@ a.text-white:hover, a.text-white:focus {
 .opening #section-two-opening-1 {
   position: relative;
   opacity: 0;
+  display: none;
+  letter-spacing: 50px;
 }
 
 .opening span.greating {
   width: 100%;
   opacity: 0;
   display: none;
+  text-transform: lowercase;
+  text-shadow: 1px 5px 25px #21212130;
 }
 
 .opening span.greating#section-two-opening-2 {
-  -webkit-transform: translate(0px, -200px);
-          transform: translate(0px, -200px);
+  opacity: .15;
+  letter-spacing: 50px;
 }
 
 .opening span.greating#section-two-opening-2 span {
-  opacity: 0;
-  -webkit-transform: translate(-100px, 0px);
-          transform: translate(-100px, 0px);
+  opacity: .15;
 }
 
 .opening span.greating#section-two-opening-3 {
-  -webkit-transform: translate(-100px, 0px);
-          transform: translate(-100px, 0px);
+  position: relative;
+  text-transform: capitalize;
+  letter-spacing: 50px;
+  width: auto;
+  padding: 0 50px;
+  background-image: linear-gradient(109.6deg, #68b7f9 31.3%, #b0f8c8 100.2%);
+}
+
+.opening span.greating#section-two-opening-3:after {
+  content: "ANGKODS";
+  position: absolute;
+  top: 50%;
+  font-size: 3.5em;
+  left: 50%;
+  z-index: -1;
+  opacity: .15;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #353742;
+}
+
+.opening span.greating#section-two-opening-3:before {
+  content: "advertising agency";
+  position: absolute;
+  font-size: 20px;
+  color: black;
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+  letter-spacing: 1px;
+  right: 50px;
+  bottom: 0px;
+  z-index: -1;
+  background: yellow;
+  padding: 5px 20px;
 }
 
 .ads-banner {
@@ -11425,6 +11464,10 @@ a.text-white:hover, a.text-white:focus {
 
 .righteous {
   font-family: 'Righteous', cursive;
+}
+
+.Quicksand {
+  font-family: 'Quicksand', sans-serif;
 }
 
 .section-title {
@@ -11741,7 +11784,7 @@ a.text-white:hover, a.text-white:focus {
 
 .navbar-nav .nav-item a {
   text-decoration: none;
-  color: #3D425E;
+  color: #353742;
   font-weight: 600;
 }
 
@@ -12051,11 +12094,11 @@ html {
 
 * {
   outline: 0;
-  color: #3D425E;
+  color: #353742;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: #f7f7f7;
   font-weight: 300;
 }

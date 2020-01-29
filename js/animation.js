@@ -135,64 +135,100 @@ function section_two(){
     tl
     .to(
         ".opening",
-        {opacity : 1 ,boxShadow: "0 10px 45px 5px rgba(33,33,33, .6)"},
+        {duration: .5, opacity : 1, top : "30vh",bottom:"30vh",},
         0
     )
     .to(
-        ".opening",
-        {duration:.1, margin: "70px", boxShadow: "0 10px 25px 5px rgba(33,33,33, .35)"},
+        "#section-two-opening-1",
+        {duration: .25, display : "block"},
         .5
     )
     .to(
         "#section-two-opening-1",
-        {duration: .25, opacity : 1, scale : 1, letterSpacing: "30px",ease:Circ.easeInOut},
+        {duration: .5, opacity : 1, scale : 1, letterSpacing: "0px",ease:Circ.easeInOut},
         .75
     )
     .to(
         "#section-two-opening-1",
-        {duration: .25, opacity : 0, scale : 1, letterSpacing: "150px", ease:Circ.easeInOut},
-        1.75
+        {duration: .25, opacity : 0, scale : 1, y: 100, ease:Circ.easeInOut},
+        2.25
     )
     .to(
         "#section-two-opening-1",
         {duration: 0, display : "none"},
-        2
+        2.35
     )
     .to( 
-        ".greating",
-        {duration : 0, display : "inline"},
-        2.10
-    )
-    .to(
         "#section-two-opening-2",
-        {duration: .25, y:0, opacity: 1, ease:Circ.easeInOut},
-        2.2
+        {duration : .25, opacity: 1, display : "inline", letterSpacing: "0px"},
+        2.40
     )
     .to(
-        "#section-two-opening-2 span",
-        {duration: .25, x:0, opacity: 1, ease:Circ.easeInOut},
-        2.5
+        "#section-two-opening-2 .wel",
+        {duration: .15, y:0, opacity: 1, ease:Circ.easeInOut},
+        2.9
     )
-
     .to(
+        "#section-two-opening-2 .come",
+        {duration: .15, y:0, opacity: 1, ease:Circ.easeInOut},
+        3.05
+    )
+    .to(
+        "#section-two-opening-2 .to",
+        {duration: .15, y:0, opacity: 1, ease:Circ.easeInOut},
+        3.2
+    )
+    .to( 
+        "#section-two-opening-2",
+        {duration : .25, opacity: 0, y : -700, ease:Circ.easeInOut},
+        3.5
+    )
+    .to( 
+        "#section-two-opening-2",
+        {duration : 0, display: "none"},
+        3.6
+    )
+    .to(
+        ".opening",
+        {opacity : 1, top : "0",bottom:"0",ease:Circ.easeInOut},
+        3.5
+    )
+    .to(
+        ".navbar-nav .nav-item a",
+        {color: "white",ease:Circ.easeInOut},
+        3.6
+    )
+    .to( 
         "#section-two-opening-3",
-        {duration: .25, x:0, opacity: 1, ease:Circ.easeInOut},
-        2.8
+        {duration : .5, display: "inline", opacity : 1, letterSpacing: "0px", ease:Circ.easeInOut},
+        4.1
+    )
+    .to( 
+        "#section-two-opening-3",
+        {duration : .25, display: "inline", opacity : 1, letterSpacing: "0px",skewY : -5, ease:Circ.easeInOut},
+        4.6
+    )
+    .to( 
+        "#section-two-opening-3",
+        {duration : .25, display: "inline", opacity : 0, letterSpacing: "0px",skewY : -5, x:-1000,y: 100, ease:Circ.easeInOut},
+        7
+    )
+    .to(
+        ".navbar-nav .nav-item a",
+        {color: "unset",ease:Circ.easeInOut},
+        8
     )
     .to(
         ".opening",
-        {duration:1, margin: "100px 0",boxShadow: "0 10px 25px 5px rgba(33,33,33, .35)", ease:Circ.easeInOut},
-        3.25
+        {duration:.25,opacity : 1, bottom : "100vh"},
+        8
     )
-    .to(
-        ".opening",
-        {duration:.25, margin: "50vh 0",boxShadow: "0 10px 25px 5px rgba(33,33,33, 0)", ease: "slow( 0.25, 0.25, false)"},
-        4
-    )
- 
+    
     console.log("play 11")
     tl.play();
     return tl;
 }
+
+
 
  
