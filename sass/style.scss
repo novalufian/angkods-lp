@@ -40,6 +40,7 @@ $theme-colors: (
 );
 
 $dark-color : #0F141A; 
+$body-color : #f7f7f7;
  
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "_grid";
@@ -71,7 +72,7 @@ body {
     // font-family: 'Varela Round', sans-serif;
     // font-family: 'Source Sans Pro', sans-serif;
     // font-family: 'Raleway', sans-serif;
-    background : #f7f7f7;
+    background : $body-color;
     font-weight: 300; 
     // background: #0F141A;
 }
