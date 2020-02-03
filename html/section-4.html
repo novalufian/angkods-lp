@@ -34,27 +34,113 @@
         </div>
     </nav>
     
-    <div class="page-section mh-100 intro-section" id="home">
+    <div class="page-section mh-100 intro-section d-flex flex-column align-items-center justify-content-center" id="home">
         <!-- section 4 phone -->
         <div id="section-four" class="d-flex flex-column align-items-center justify-content-center">
             <img class="main-img" src="../img/burger.png" alt="">
-            <!-- <img class="conveti-1" src="../img/fries.png" alt=""> -->
-            <!-- <img class="conveti-2" src="../img/fries.png" alt=""> -->
-            <!-- <h1 class="food-text righteous w900">FOODS</h1> -->
+            <img class="conveti-1" src="../img/fries.png" alt="">
+            <img class="conveti-2" src="../img/fries.png" alt="">
+            <h1 class="food-text righteous w900">FOODS</h1>
 
             <img src="../img/bottle.png" alt="" class="main-img-drink">
             <!-- <img src="../img/orange-half-slice.png" alt="" class="conveti-3"> -->
             <!-- <img src="../img/orange-slice.png" alt="" class="conveti-4"> -->
             <!-- <img src="../img/mint.png" alt="" class="conveti-4"> -->
-            <!-- <h1 class="drink-text righteous w900">DRINK.</h1>  -->
+            <h1 class="drink-text righteous ">DRINK.</h1> 
 
-            <h1 class="promotion righteous w900">Promotion.</h1>
-            <h1 class="promo-banner-text">buy burger <br>get free drink </h1>
-            <div id="promotion-banner"></div>
-
+            <!-- <h1 class="promotion righteous w900">Promotion.</h1> -->
+            <!-- <h1 class="promo-banner-text">buy burger <br>get free drink </h1> -->
+            <!-- <div id="promotion-banner"></div> -->
+ 
             <!-- text section -->
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script> -->
+    <script src="../js/libs/gsap.js"></script>
+    <script src="../js/libs/CSSRulePlugin.js"></script>
+
+    <script>
+        var tl = new TimelineMax();
+        tl
+        .to(
+            "#section-four",
+            {duration: .35, height: "100vh",opacity: 1,ease : Expo.easeOut},
+            1
+        )
+        .to(
+            "#section-four",
+            {duration: .35, height: "100vh" ,width : "100%",opacity: 1,ease : Expo.easeInOut},
+            1.40
+        )
+        .to(
+            ".food-text",
+            {duration: .5, letterSpacing : -30 ,opacity: 1,ease : Expo.easeInOut},
+            2
+        )
+        .to(
+            ".food-text",
+            {duration: .5, textShadow : "0px 0px 20px" ,opacity: 1,ease : Expo.easeInOut},
+            2.6
+        )
+        .to(
+            ".main-img",
+            {duration: .5,y: 0,opacity: 1,ease : Power2.easeOut},
+            3
+        )
+        .to(
+            ".conveti-1",
+            {duration: .5,y: -200,opacity: 1,ease : Circ.easeOut},
+            3.2
+        )
+        .to(
+            ".conveti-2",
+            {duration: .5,y: 150,opacity: 1,ease : Circ.easeOut},
+            3.4
+        )
+
+        // out
+
+        .to(
+            ".conveti-1",
+            {duration: .5,y: "200%",opacity: 0,ease : Circ.easeOut},
+            5
+        )
+        .to(
+            ".conveti-2",
+            {duration: .5,y: "200%",opacity: 0,ease : Circ.easeOut},
+            5.2
+        )
+        .to(
+            ".main-img",
+            {duration: .5,y: "-100%",opacity: 0,ease : Circ.easeOut},
+            5.5
+        )
+        .to(
+            ".food-text",
+            {duration: .5, letterSpacing : -100 ,opacity: 0,ease : Expo.easeInOut},
+            5.8
+        )
+
+        // drink drop-shadow(0px 0px 5px #21212120)
+
+        .from(
+            ".drink-text",
+            {duration: .5, y : "100%" ,opacity: 0,ease : Expo.easeInOut},
+            6
+        )
+        .to(
+            ".drink-text",
+            {duration: .5, filter : "drop-shadow(0px 0px 5px #21212120)",ease : Expo.easeInOut},
+            6
+        )
+        .from(
+            ".main-img-drink",
+            {duration: .5,  opacity : 0 ,ease : Expo.easeInOut},
+            6.2
+        )
+    </script>
 </body>
 </html>
 

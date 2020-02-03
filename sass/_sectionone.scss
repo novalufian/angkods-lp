@@ -272,19 +272,16 @@
 #section-four{
     position: absolute;
     font-size: 10em;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     text-align: center;
     z-index: 10;
     margin: 0;
-    // overflow: hidden; promotion section
-    // background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(255,246,236,1) 39.5%, rgba(100,46,122,0.23) 100.2% );
+    overflow: hidden;
+    width: 10px;
+    height: 0px;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(236,250,1,0.98) 0%, rgba(254,154,46,1) 98.1% );
 
     // promotion section
-    width: 30%;
+    // width: 30%;
     
     .main-img{
         position: absolute;
@@ -292,7 +289,8 @@
         height: 60vh;
         margin: 0 auto;
         filter: drop-shadow(2px 50px 30px #21212135);
-        transform: rotate(-5deg);
+        transform: rotate(-5deg) translateY(500px);
+        opacity: 0;
     }
     
     .main-img-drink {
@@ -309,9 +307,10 @@
         color: white;
         position: absolute;
         z-index: 5;
-        letter-spacing: -30px;
+        letter-spacing: 100px;
         transform: translateY(-15vh);
-        text-shadow: 0px 0px 20px;
+        text-shadow: 0px 0px 0px;
+        opacity: 0;
     }
     
     .drink-text{
@@ -325,7 +324,7 @@
         letter-spacing: 10px;
         bottom: 0;
         transform: translate(-20%, -20%);
-        filter: drop-shadow(0px 0px 5px #21212120);
+        filter: drop-shadow(0px 0px 0px #21212100);
     }
     
     .promotion{
@@ -352,18 +351,22 @@
     }
     
     img{
-        &.conveti-2{
+        &.conveti-1{
             right: 2.5%;
-            bottom: 10vh;
+            bottom: 0px;
             z-index: 30;
-            transform: rotate(45deg) scale(2);
+            transform: translate(10%, 100%) rotate(45deg) scale(2);
             filter: blur(2px) drop-shadow(2px 4px 40px #21212110);
+            position: absolute;
+            right: 0;
+            opacity : 0;
         }
         
         &.conveti-2{
-            transform: translate(-120%, 100%) scale(1.35) rotate(-5deg);
+            transform: translate(-120%, 200%) scale(1.35) rotate(-5deg);
             z-index: 20;
             filter: drop-shadow(2px 4px 20px #21212120) blur(1px);
+            opacity : 0;
         }
         
         &.conveti-3 {
