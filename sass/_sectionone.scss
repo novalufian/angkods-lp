@@ -314,16 +314,15 @@
     }
     
     .drink-text{
-        font-size: 1.4em;
-        color: transparent;
+        font-size: 1.2em;
+        color: white;
         position: absolute;
         z-index: 0;
         padding: 30px;
         -webkit-text-stroke: 2px white;
         text-align: left;
-        letter-spacing: 10px;
-        bottom: 0;
-        transform: translate(-20%, -20%);
+        letter-spacing: -10px;
+        left: 10%;
         filter: drop-shadow(0px 0px 0px #21212100);
     }
     
@@ -333,10 +332,10 @@
         z-index: 0;
         padding: 30px;
         text-align: right;
-        bottom: 0;
-        right: 0;
+        left: 35%;
+        bottom : 50%;
+        transform: translateY(50%);
         width: 100vh;
-        background: #fff;
     }
     
     .promo-banner-text {
@@ -400,24 +399,25 @@
 #section-five{
     position: absolute;
     font-size: 10em;
-    top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
     text-align: center;
     z-index: 10;
     margin: 0;
     overflow: hidden;
+    width: 100%;
+    height: 100vh;
     
     // feature
     // background: yellow;
     // box
-    // background-image: radial-gradient( circle 879px at 10.4% 22.3%,  rgba(255,235,238,1) 0%, rgba(186,190,245,1) 93.6% );
+    background-image: radial-gradient( circle 879px at 10.4% 22.3%,  rgba(255,235,238,1) 0%, rgba(186,190,245,1) 93.6% );
     
     #phone-wrapper{
         position: absolute;
         width: auto;
         transition: all .5s ease-in;
+        opacity: 0;
         
         &.box{
             padding: 70px 30px;
@@ -624,6 +624,8 @@
         line-height: .8em;
         text-align: left;
         left: 10%;
+        transform: translateX(-100%);
+        opacity: 0;
     }
     
     .app-atribute{

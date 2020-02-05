@@ -49,7 +49,7 @@
             <h1 class="drink-text righteous ">DRINK.</h1> 
 
             <h1 class="promotion righteous w900">Promotion.</h1>
-            <h1 class="promo-banner-text">buy burger <br>get free drink </h1>
+            <!-- <h1 class="promo-banner-text">buy burger <br>get free drink </h1> -->
             <!-- <div id="promotion-banner"></div> -->
  
             <!-- text section -->
@@ -91,15 +91,10 @@
             2.3
         )
         
-        // .to(
-        //     ".food-text",
-        //     {duration: .5, textShadow : "0px 0px 20px" ,opacity: 1,ease : Expo.easeInOut},
-        //     2.6
-        // )
         .to(
             ".conveti-2",
             {duration: .35,y: 150,opacity: 1,ease : Circ.easeOut},
-            3
+            2.5
         )
 
         // out
@@ -134,13 +129,8 @@
 
         .from(
             ".drink-text",
-            {duration: .5, y : "100%" ,opacity: 0,ease : Expo.easeInOut},
+            {duration: 1, x : "-100%" ,opacity: 0,ease : Expo.easeInOut},
             4
-        )
-        .to(
-            ".drink-text",
-            {duration: .5, filter : "drop-shadow(0px 0px 5px #21212120)",ease : Expo.easeInOut},
-            4.5
         )
         .from(
             ".main-img-drink",
@@ -155,36 +145,53 @@
         // out
         .to(
             ".drink-text",
-            {duration: .5, y : "-100%" ,opacity: 0,ease : Expo.easeInOut},
-            5.7
+            {duration: .5, x : "-100%" ,opacity: 0,ease : Expo.easeInOut},
+            6.5
         )
         .to(
             ".conveti-3",
             {duration: .75,  opacity : 0, x : "65%",ease : Expo.easeInOut},
-            6
+            6.7
         )
 
         // promtion
 
         .to(
             "#section-four",
-            {duration: .35, width : "30%", overflow: "unset" ,ease : Expo.easeInOut},
-            6.5
+            {duration: .35, width : "30%", overflow: "unset" , borderRadius : "0 1000px 1000px 0",ease : Expo.easeInOut},
+            7
         )
         .to(
             ".main-img",
             {duration: .5,y: 0,opacity: 1,ease : Power2.easeOut},
-            6.8
+            7.3
         )
         .from(
             ".promotion",
-            {duration: .5,x: 1000,opacity: 0,ease : Power2.easeOut},
-            7
+            {duration: .5,x: "100%",opacity: 0,ease : Power2.easeOut},
+            7.6
         )
-        .from(
-            ".promo-banner-text",
-            {duration: .5,x: -500,opacity: 0,ease : Power2.easeOut},
-            7.5
+
+        //out
+        .to(
+            ".main-img",
+            {duration: .5,x: "-100%",opacity: 0,ease : Power2.easeOut},
+            9.6
+        )
+        .to(
+            ".main-img-drink",
+            {duration: .5,x: "-100%", opacity : 0 },
+            10
+        )
+        .to(
+            "#section-four",
+            {duration: .35, width : "0px", height : "0px", overflow: "unset" , borderRadius : "0 1000px 1000px 0",ease : Expo.easeInOut},
+            10.5
+        )
+        .to(
+            ".promotion",
+            {duration: .5,x: "-100%",opacity: 0,ease : Power2.easeOut},
+            10.7
         )
     </script>
 </body>
