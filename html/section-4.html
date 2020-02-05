@@ -43,13 +43,13 @@
             <h1 class="food-text righteous w900">FOODS</h1>
 
             <img src="../img/bottle.png" alt="" class="main-img-drink">
-            <!-- <img src="../img/orange-half-slice.png" alt="" class="conveti-3"> -->
+            <img src="../img/orange-half-slice.png" alt="" class="conveti-3">
             <!-- <img src="../img/orange-slice.png" alt="" class="conveti-4"> -->
             <!-- <img src="../img/mint.png" alt="" class="conveti-4"> -->
             <h1 class="drink-text righteous ">DRINK.</h1> 
 
-            <!-- <h1 class="promotion righteous w900">Promotion.</h1> -->
-            <!-- <h1 class="promo-banner-text">buy burger <br>get free drink </h1> -->
+            <h1 class="promotion righteous w900">Promotion.</h1>
+            <h1 class="promo-banner-text">buy burger <br>get free drink </h1>
             <!-- <div id="promotion-banner"></div> -->
  
             <!-- text section -->
@@ -72,32 +72,34 @@
         .to(
             "#section-four",
             {duration: .35, height: "100vh" ,width : "100%",opacity: 1,ease : Expo.easeInOut},
-            1.40
+            1.3
         )
+        
         .to(
             ".food-text",
             {duration: .5, letterSpacing : -30 ,opacity: 1,ease : Expo.easeInOut},
-            2
-        )
-        .to(
-            ".food-text",
-            {duration: .5, textShadow : "0px 0px 20px" ,opacity: 1,ease : Expo.easeInOut},
-            2.6
+            1.5
         )
         .to(
             ".main-img",
             {duration: .5,y: 0,opacity: 1,ease : Power2.easeOut},
-            3
+            2
         )
         .to(
             ".conveti-1",
-            {duration: .5,y: -200,opacity: 1,ease : Circ.easeOut},
-            3.2
+            {duration: .35,y: -200,opacity: 1,ease : Circ.easeOut},
+            2.3
         )
+        
+        // .to(
+        //     ".food-text",
+        //     {duration: .5, textShadow : "0px 0px 20px" ,opacity: 1,ease : Expo.easeInOut},
+        //     2.6
+        // )
         .to(
             ".conveti-2",
-            {duration: .5,y: 150,opacity: 1,ease : Circ.easeOut},
-            3.4
+            {duration: .35,y: 150,opacity: 1,ease : Circ.easeOut},
+            3
         )
 
         // out
@@ -105,22 +107,27 @@
         .to(
             ".conveti-1",
             {duration: .5,y: "200%",opacity: 0,ease : Circ.easeOut},
-            5
+            3.4
         )
         .to(
             ".conveti-2",
             {duration: .5,y: "200%",opacity: 0,ease : Circ.easeOut},
-            5.2
+            3.5
         )
         .to(
             ".main-img",
             {duration: .5,y: "-100%",opacity: 0,ease : Circ.easeOut},
-            5.5
+            3.7
         )
         .to(
             ".food-text",
             {duration: .5, letterSpacing : -100 ,opacity: 0,ease : Expo.easeInOut},
-            5.8
+            3.8
+        )
+        .to(
+            "#section-four",
+            {duration: .35, left : 0},
+            3.81
         )
 
         // drink drop-shadow(0px 0px 5px #21212120)
@@ -128,17 +135,56 @@
         .from(
             ".drink-text",
             {duration: .5, y : "100%" ,opacity: 0,ease : Expo.easeInOut},
-            6
+            4
         )
         .to(
             ".drink-text",
             {duration: .5, filter : "drop-shadow(0px 0px 5px #21212120)",ease : Expo.easeInOut},
-            6
+            4.5
         )
         .from(
             ".main-img-drink",
-            {duration: .5,  opacity : 0 ,ease : Expo.easeInOut},
-            6.2
+            {duration: .75,  opacity : 0},
+            4.8
+        )
+        .to(
+            ".conveti-3",
+            {duration: .75,  opacity : 1, x : "35%",ease : Expo.easeInOut},
+            5
+        )
+        // out
+        .to(
+            ".drink-text",
+            {duration: .5, y : "-100%" ,opacity: 0,ease : Expo.easeInOut},
+            5.7
+        )
+        .to(
+            ".conveti-3",
+            {duration: .75,  opacity : 0, x : "65%",ease : Expo.easeInOut},
+            6
+        )
+
+        // promtion
+
+        .to(
+            "#section-four",
+            {duration: .35, width : "30%", overflow: "unset" ,ease : Expo.easeInOut},
+            6.5
+        )
+        .to(
+            ".main-img",
+            {duration: .5,y: 0,opacity: 1,ease : Power2.easeOut},
+            6.8
+        )
+        .from(
+            ".promotion",
+            {duration: .5,x: 1000,opacity: 0,ease : Power2.easeOut},
+            7
+        )
+        .from(
+            ".promo-banner-text",
+            {duration: .5,x: -500,opacity: 0,ease : Power2.easeOut},
+            7.5
         )
     </script>
 </body>

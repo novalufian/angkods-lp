@@ -11518,9 +11518,8 @@ a.text-white:hover, a.text-white:focus {
 #section-four .promo-banner-text {
   position: fixed;
   left: 50%;
-  -webkit-transform: translateX(-30%);
-          transform: translateX(-30%);
   font-size: .3em;
+  top: 50vh;
 }
 
 #section-four .conveti {
@@ -11553,10 +11552,11 @@ a.text-white:hover, a.text-white:focus {
   position: absolute;
   width: 25%;
   z-index: 1;
-  -webkit-transform: translate(35%, -5%);
-          transform: translate(35%, -5%);
+  -webkit-transform: translate(85%, -5%);
+          transform: translate(85%, -5%);
   -webkit-filter: drop-shadow(20px 20px 20px #21212120);
           filter: drop-shadow(20px 20px 20px #21212120);
+  opacity: 0;
 }
 
 #section-four img.conveti-4 {
@@ -11590,17 +11590,48 @@ a.text-white:hover, a.text-white:focus {
   z-index: 10;
   margin: 0;
   overflow: hidden;
-  background: yellow;
 }
 
 #section-five #phone-wrapper {
   position: absolute;
   width: auto;
-  padding: 20px 30px;
-  -webkit-transform: rotate3d(12, 0, 3, -25deg) translate(-120%, 0px);
-          transform: rotate3d(12, 0, 3, -25deg) translate(-120%, 0px);
   -webkit-transition: all .5s ease-in;
   transition: all .5s ease-in;
+}
+
+#section-five #phone-wrapper.box {
+  padding: 70px 30px;
+  -webkit-transform: rotate(-35deg) skew(10deg, 5deg) scale(0.75) translate(-100%, -40%);
+          transform: rotate(-35deg) skew(10deg, 5deg) scale(0.75) translate(-100%, -40%);
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #fff6ec 39.5%, rgba(100, 46, 122, 0.23) 100.2%);
+  -webkit-box-shadow: -70px 85px 30px #21212120,  -70px 85px 50px #21212120,  -70px 85px 80px #21212120;
+          box-shadow: -70px 85px 30px #21212120,  -70px 85px 50px #21212120,  -70px 85px 80px #21212120;
+}
+
+#section-five #phone-wrapper.box#phone-wrapper::after {
+  content: "";
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: -44px;
+  left: 0;
+  z-index: 5;
+  -webkit-transform: skew(0deg, -60deg) translateX(-100%);
+          transform: skew(0deg, -60deg) translateX(-100%);
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #e2ddd8 39.5%, rgba(100, 46, 122, 0.23) 100.2%);
+}
+
+#section-five #phone-wrapper.box#phone-wrapper::before {
+  content: "";
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 30px;
+  left: 17px;
+  z-index: 9;
+  -webkit-transform: skewX(-44deg) skewY(0deg) translate(45px, 100px);
+          transform: skewX(-44deg) skewY(0deg) translate(45px, 100px);
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(100, 46, 122, 0.23) 100.2%, rgba(100, 46, 122, 0.23) 100.2%);
 }
 
 #section-five #phone-wrapper.application {
@@ -11608,17 +11639,11 @@ a.text-white:hover, a.text-white:focus {
           transform: rotate3d(12, 0, 3, 25deg) translate(120%, 0px);
 }
 
-#section-five #phone-wrapper.application #phone {
-  -webkit-box-shadow: 20px 20px 25px 10px #21212120;
-          box-shadow: 20px 20px 25px 10px #21212120;
-}
-
 #section-five #phone-wrapper.application #phone .screen .application {
   position: relative;
   width: 100%;
   height: 100%;
-  background: green;
-  background-image: url(https://hackernoon.com/hn-images/1*WGRoO_-UNHay_UkTLVNqbQ.png);
+  background-image: radial-gradient(circle farthest-corner at 0.5% 97.2%, #3e86d3 0%, #93c4ff 100.2%);
   background-size: cover;
 }
 
@@ -11673,8 +11698,6 @@ a.text-white:hover, a.text-white:focus {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px;
-  -webkit-box-shadow: -20px 20px 25px 10px #21212120;
-          box-shadow: -20px 20px 25px 10px #21212120;
   -webkit-transition: all .5s ease-in;
   transition: all .5s ease-in;
 }
@@ -11746,7 +11769,7 @@ a.text-white:hover, a.text-white:focus {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
   top: 10%;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -11761,7 +11784,7 @@ a.text-white:hover, a.text-white:focus {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
   top: -100%;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
