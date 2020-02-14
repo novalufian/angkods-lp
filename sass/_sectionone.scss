@@ -276,125 +276,196 @@
     z-index: 10;
     margin: 0;
     overflow: hidden;
-    width: 10px;
-    height: 0px;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(236,250,1,0.98) 0%, rgba(254,154,46,1) 98.1% );
+    width: 100%;
+    height: 100vh;
+    // background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(236,250,1,0.98) 0%, rgba(254,154,46,1) 98.1% );
     
-    // promotion section
-    // width: 30%;
-    
-    .main-img{
+    #food-section{
+        background : #fcf8e8;
+        width: 50%;
+        height: 100vh;
         position: absolute;
-        z-index: 10;
-        height: 60vh;
-        margin: 0 auto;
-        filter: drop-shadow(2px 50px 30px #21212135);
-        transform: rotate(-5deg) translateY(500px);
-        opacity: 0;
-    }
-    
-    .main-img-drink {
-        position: absolute;
-        z-index: 10;
-        height: 60vh;
-        transform: translateX(150%) rotate(25deg) scale(1.2);
-        filter: drop-shadow(20px 40px 60px #21212140);
+        left: 0;
+        top: 0;
+        transition: all .5s ease-in-out;
         
-    }
-    
-    .food-text{
-        font-size: 2em;
-        color: white;
-        position: absolute;
-        z-index: 5;
-        letter-spacing: 100px;
-        transform: translateY(-15vh);
-        text-shadow: 0px 0px 0px;
-        opacity: 0;
-    }
-    
-    .drink-text{
-        font-size: 1.2em;
-        color: white;
-        position: absolute;
-        z-index: 0;
-        padding: 30px;
-        -webkit-text-stroke: 2px white;
-        text-align: left;
-        letter-spacing: -10px;
-        left: 10%;
-        filter: drop-shadow(0px 0px 0px #21212100);
-    }
-    
-    .promotion{
-        font-size: .8em;
-        position: fixed;
-        z-index: 0;
-        padding: 30px;
-        text-align: right;
-        left: 35%;
-        bottom : 50%;
-        transform: translateY(50%);
-        width: 100vh;
-    }
-    
-    .promo-banner-text {
-        position: fixed;
-        left: 50%;
-        font-size: .3em;
-        top : 50vh;
-    }
-    
-    .conveti{
-        position: absolute;
-    }
-    
-    img{
-        &.conveti-1{
-            right: 2.5%;
-            bottom: 0px;
-            z-index: 30;
-            transform: translate(10%, 100%) rotate(45deg) scale(2);
-            filter: blur(2px) drop-shadow(2px 4px 40px #21212110);
-            position: absolute;
-            right: 0;
-            opacity : 0;
-        }
-        
-        &.conveti-2{
-            transform: translate(-120%, 200%) scale(1.35) rotate(-5deg);
-            z-index: 20;
-            filter: drop-shadow(2px 4px 20px #21212120) blur(1px);
-            opacity : 0;
-        }
-        
-        &.conveti-3 {
-            position: absolute;
-            width: 25%;
-            z-index: 1;
-            transform: translate(85%, -5%);
-            filter: drop-shadow(20px 20px 20px #21212120);
-            opacity: 0;
-        }
-        
-        &.conveti-4 {
-            position: absolute;
-            z-index: 30;
-            right: 0;
+        #food-img{
+            position: fixed;
             bottom: 0;
-            transform: translate(30%, 30%) rotate(-20deg);
-            filter: blur(5px) drop-shadow(10px 10px 30px orange);
+            right: 400px;
+            width: 800px;
+            filter: drop-shadow(-25px 15px 20px #21212120);
+            transition: all .5s ease-in-out;
         }
         
-        &.conveti-5{
-            z-index: 12;
-            transform: translate(50%, 0%) rotate(20deg);
-            width: 100px;
-            filter: drop-shadow(0px 0px 20px #21212150);
+        .food-text {
+            font-size: .8em;
+            letter-spacing: -5px;
+            color: #fa163f;
+            position: absolute;
+            left: 80px;
+            top: 25vh;
+            transform: translateY(-50%);
+            font-style: initial;
+        }
+        
+        p.text{
+            font-size: 12px;
+            line-height: 20px;
+            width: 300px;
+            text-align: left;
+            position: absolute;
+            left: 80px;
+            top: calc(25vh + 6em);
+        }
+        
+        p.food-name{
+            position: absolute;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: left;
+            bottom: 10vh;
+            left: 60px;
+            color: #fa163f;
+            font-family: 'Gilroy-bold';
+            transform: rotate(-90deg) translateX(100%);
+            
+            &:after{
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 50px;
+                background: #fa163f;
+                left: -50px;
+                transform: rotate(90deg);
+                bottom: 0px;
+            }
+        }
+    }
+    
+    #drink-section{
+        background: #ffd739;
+        width: 50%;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all .5s ease-in-out;
+        
+        #drink-img {
+            position: fixed;
+            width: 200px;
+            left: calc(50% - 50px);
+            bottom: 0;
+            transform: rotate(15deg);
+            z-index: 10;
+            filter: drop-shadow(5px 5px 10px #21212110);
+            transition: all .5s ease-in-out;
+        }
+        
+        #orange-img {
+            position: fixed;
+            width: 300px;
+            bottom: 50px;
+            left: calc(50% + 40px);
+            z-index: 5;
+            filter: drop-shadow(5px 55px 20px #ffa41b30);
+            transition: all .5s ease-in-out;
+        }
+        
+        .drink-text{
+            font-size: .8em;
+            letter-spacing: -5px;
+            color: #fff;
+            position: absolute;
+            right: 80px;
+            top: 25vh;
+            transform: translateY(-50%);
+            font-style: initial;
+        }
+        
+        p.text {
+            font-size: 12px;
+            line-height: 20px;
+            width: 350px;
+            text-align: right;
+            position: absolute;
+            right: 80px;
+            top: calc(25vh + 6em);
+            color: #fff;
+        }
+        
+        p.food-name {
+            position: absolute;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: left;
+            bottom: 10vh;
+            right: 60px;
+            color: orange;
+            font-family: 'Gilroy-bold';
+            transform: rotate(90deg) translateX(-100%);
+            
+            &:after{
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 50px;
+                background: orange;
+                right: -50px;
+                transform: rotate(90deg);
+                bottom: 0px;
+            }
+        }
+    }
+    
+    h1.promotion {
+        position: fixed;
+        z-index: 10;
+        font-size: 1em;
+        bottom: 0vh;
+        letter-spacing: -10px;
+        color: #fff;
+        text-shadow: 5px 1px 70px #21212110;
+    }
+    
+    h1.plus {
+        position: fixed;
+        z-index: 12;
+        font-size: 2em;
+        color: #fa163f;
+    }
+    
+    &.promotion{
+        #food-section{
+            width: 35vh;
+            height: 70vh;
+            top: 15vh;
+            left: calc(50% - 35vh);
+            border-radius: 2000px 0 0 2000px;
+            
+            #food-img{
+                bottom: 50%;
+                transform: translateY(50%);
+            }
+        }
+        
+        
+        #drink-section{
+            width: 35vh;
+            height: 70vh;
+            top: 15vh;
+            right: calc(50% - 35vh);
+            border-radius: 0 2000px 2000px 0;
+            
+            #orange-img,
+            #drink-img{
+                bottom: 50%;
+                transform: translateY(50%);
+            }
         }
     }
 }
-
 
 #section-five{
     position: absolute;
@@ -408,213 +479,361 @@
     width: 100%;
     height: 100vh;
     
-    // feature
-    // background: yellow;
-    // box
-    background-image: radial-gradient( circle 879px at 10.4% 22.3%,  rgba(255,235,238,1) 0%, rgba(186,190,245,1) 93.6% );
-    
-    #phone-wrapper{
-        position: absolute;
-        width: auto;
-        transition: all .5s ease-in;
-        opacity: 0;
+    .phone-border-wrapper{
+        height: 100vh;
         
-        &.box{
-            padding: 70px 30px;
-            transform: rotate(-35deg) skew(10deg, 5deg) scale(0.75) translate(-100%, -40%);
-            background-image: radial-gradient(circle farthest-corner at 10% 20%, #fff6ec 39.5%, rgba(100, 46, 122, 0.23) 100.2%);
-            box-shadow : -70px 85px 30px #21212120, 
-            -70px 85px 50px #21212120, 
-            -70px 85px 80px #21212120;
+        #phone-wrapper{
+            position: absolute;
+            right: 0;
+            width: auto;
+            transition: all .5s ease-in;
             
-            &#phone-wrapper::after {
-                content: "";
-                width: 50px;
-                height: 100%;
-                position: absolute;
-                top: -44px;
-                left: 0;
-                z-index: 5;
-                transform: skew(0deg, -60deg) translateX(-100%);
-                background-image: radial-gradient(circle farthest-corner at 10% 20%, #e2ddd8 39.5%, rgba(100, 46, 122, 0.23) 100.2%);
+            &.box{
+                transform: rotateZ(-5deg) rotateY(5deg) translateY(5%);
             }
-            
-            &#phone-wrapper::before {
-                content: "";
-                width: 100%;
-                height: 70px;
-                position: absolute;
-                bottom: 30px;
-                left: 17px;
-                z-index: 9;
-                transform: skewX(-44deg) skewY(0deg) translate(45px, 100px);
-                background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(100, 46, 122, 0.23) 100.2%, rgba(100, 46, 122, 0.23) 100.2%);
-            }
-        }
-        
-        &.application{
-            transform: rotate3d(12, 0, 3, 25deg) translate(120%, 0px);
             
             #phone{
-                // box-shadow: 20px 20px 25px 10px #21212120;
-                .screen{
-                    .application{
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        background-image: radial-gradient( circle farthest-corner at 0.5% 97.2%,  rgba(62,134,211,1) 0%, rgba(147,196,255,1) 100.2% );
-                        // background-image: url(https://hackernoon.com/hn-images/1*WGRoO_-UNHay_UkTLVNqbQ.png);
-                        background-size: cover;
-                    }
+                width: 230px;
+                height: calc(230px * 2.05);
+                border-radius: 40px;
+                background: #353742;
+                overflow: hidden;
+                box-sizing: border-box;
+                padding: 7px;
+                transition: all .5s ease-in;
+                position: relative;
+                overflow: hidden;
+                
+                &:after{
+                    content: "";
                 }
-            }
-        }
-        
-        &.feature{
-            transform: rotate3d(12, 0, 3, 0deg) translate(0px, 0px);
-            
-            #phone{
-                box-shadow: 0px 20px 25px 10px #21212120;
-                .screen{
-                    .feature{
-                        position: relative;
+                
+                &:before{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: #ffffff20;
+                    position: absolute;
+                    left: -50%;
+                    top: 0;
+                    transform: skewX(-5deg);
+                    z-index: 50;
+                }
+                
+                .screen {
+                    position: relative;
+                    width: auto;
+                    height: 100%;
+                    background: white;
+                    border-radius: 35px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    background-size: cover;
+                    
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        height: 20px;
+                        width: 50%;
+                        background: #353742;
+                        left: 25%;
+                        border-radius: 0 0 15px 15px;
+                        z-index: 40;
+                    }
+                    
+                    .lock-screen{
+                        object-fit: cover;
+                        display: block;
+                        height: 100%;
+                        filter: blur(3px);
+                        transform: scale(1.05);
+                        position: absolute;
+                        width: 220px;
+                        border-radius: 35px;
+                        transition: all .5s ease;
+                        z-index: 30;
+                    }
+                    
+                    .date-time {
+                        position: absolute;
+                        width: 100%;
+                        display: block;
+                        font-size: 50px;
+                        top: 80px;
+                        
+                        p#phone-date {
+                            font-size: 12px;
+                            margin: 0;
+                            opacity: .7;
+                        }
+                        
+                        p#phone-time {
+                            margin: 0px;
+                            line-height: 50px;
+                            opacity: .7;
+                        }
+                    }
+                    
+                    .application{
+                        position: absolute;
                         width: 100%;
                         height: 100%;
-                        background: green;
-                        background-image: url(https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 );
-                        background-size: cover;
+                        background: #f1f9f9;
+                        z-index: 20;
                         
-                        span{
+                        .header{
+                            width: 100%;
+                            height: 60px;
                             position: absolute;
-                            width: 50px;
-                            height: 50px;
-                            background-image: radial-gradient( circle 337px at 0% 2.1%, rgba(0,226,192,1) 0.3%, rgba(149,0,248,1) 100% );
-                            border-radius: 100px;
-                            bottom: 20px;
-                            left: 50%;
-                            transform: translate(-50%, 0px);
-                            border: solid 2px #fff;
+                            top: 0;
+                            left: 0;
+                            background: #fff;
+                            box-shadow: 1px 0px 10px 0px #bbcfff40;
+                            z-index: 1;
+                            p{
+                                color: #192965;
+                                font-size: 20px;
+                                margin: 25px 15px 0;
+                                text-align: left;
+                                box-sizing: border-box;
+                            }
                             
-                            img{
-                                position: absolute;
-                                width: 60%;
-                                height: 60%;
-                                top: 20%;
-                                left: 20%;
-                                filter: drop-shadow(0px 0px 6px #21212140);
+                        }
+                        
+                        .content {
+                            width: 100%;
+                            height: calc(100% - 60px);
+                            margin-top: 60px;
+                            overflow: hidden;
+                            
+                            ul {
+                                margin: 0;
+                                padding: 0px;
+                                position: relative;
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                
+                                li {
+                                    display: inline-block;
+                                    width: 100%;
+                                    height: 70px;
+                                    position: relative;
+                                    background: #fff;
+                                    
+                                    img {
+                                        position: absolute;
+                                        width: 40px;
+                                        margin: 15px;
+                                        border-radius: 100%;
+                                        height: 40px;
+                                        display: inline-block;
+                                        left: 0;
+                                    }
+                                    
+                                    .name {
+                                        position: absolute;
+                                        display: inline-block;
+                                        width: calc(100% - 70px);
+                                        left: 70px;
+                                        top: 14px;
+                                        
+                                        p {
+                                            position: relative;
+                                            font-size: 12px;
+                                            display: block;
+                                            margin: 0px;
+                                            line-height: 14px;
+                                            text-align: left;
+                                            color: #192965;
+                                            &:nth-child(2){
+                                                color: #19296570;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                height: 30px;
+                                                width: 90%;
+                                                -webkit-box-orient: vertical;
+                                                
+                                            }
+                                        }
+                                        
+                                        span {
+                                            position: absolute;
+                                            background: #ff2e63;
+                                            height: 20px;
+                                            width: 20px;
+                                            color: #fff;
+                                            right: 10px;
+                                            top: 5px;
+                                            border-radius: 5px;
+                                            
+                                            p{
+                                                text-align: center;
+                                                top: 3px;
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    .game {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        background: #94d3ac;
+                        z-index: 10;
+                        
+                        p{
+                            position: absolute;
+                            z-index: 12;
+                            font-size: 50px;
+                            line-height: 40px;
+                            letter-spacing: -5px;
+                            width: 100%;
+                            text-align: center;
+                            top: 50px;
+                            color: #2c7873;
+                            text-shadow: 1px 2px 0px #ccda46, 
+                                         -1px -2px 0px #32ff6a, 
+                                         1px -2px 0px #94fc13, 
+                                         -1px 2px 0px #22eaca;
+                        }
+                        
+                        img.game-img {
+                            width: 50px;
+                            position: absolute;
+                            bottom: 55px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            z-index: 10;
+                        }
+                        
+                        .par{
+                            position: absolute;
+                            left: 0;
+                            height: 100%;
+                            
+                            &.par2{
+                                animation: leftTOright 15s infinite linear;
+                            }
+                            
+                            &.par3{
+                                animation: leftTOright 14s infinite linear;
+                            }
+                            
+                            &.par4{
+                                animation: leftTOright 12s infinite linear;
+                            }
+                            
+                            &.par5{
+                                animation: leftTOright 10s infinite linear;
                             }
                         }
                     }
                 }
             }
+            
+        }
+
+        img.console-pad {
+            position: fixed;
+            z-index: -1;
+            right: 10%;
+            opacity: .02;
+            transform: rotateZ(-45deg);
         }
         
-        #phone{
-            width: 280px;
-            height: calc(280px * 2.05);
-            border-radius: 40px;
-            background: #353742;
+        .chat-highlight {
+            position: absolute;
+            width: 300px;
+            height: 100px;
+            background: #fff;
+            box-shadow: 1px 1px 25px 10px #bbcfff25;
+            border-radius: 30px;
+            
+            &.app-conveti-1{
+                transform: translateX(70%) translateY(220%);
+                z-index: 60;
+            }
+            
+            &.app-conveti-2 {
+                z-index: -1;
+                transform: translate(-40px, 100px);
+            }
+            
+            img {
+                position: absolute;
+                left: 25px;
+                top: 25px;
+                border-radius: 100px;
+            }
+            
+            .name {
+                position: absolute;
+                width: 200px;
+                left: 100px;
+                top: 50%;
+                transform: translateY(-50%);
+                
+                p {
+                    font-size: 16px;
+                    margin: 0;
+                    text-align: left;
+                    color: #192965;
+                }
+                
+                span {
+                    position: absolute;
+                    background: #ff2e63;
+                    right: -20px;
+                    top: 15px;
+                    width: 30px;
+                    border-radius: 10px;
+                    text-align: center;
+                    padding: 2.5px;
+                    
+                    p{
+                        text-align: center;
+                        color: #fff;
+                    }
+                }
+            }
+            
+            
+            
+            
+        }
+        
+        .text-wrapper {
+            height: 1.6em;
             overflow: hidden;
-            box-sizing: border-box;
-            padding: 10px;
-            // box-shadow: -20px 20px 25px 10px #21212120;
-            transition: all .5s ease-in;
+            width: 100%;
             
-            &:after{
-                content: "";
-            }
-            
-            &:before{
-                content: "";
-            }
-            
-            .screen {
-                position: relative;
-                width: auto;
-                height: 100%;
-                background: white;
-                border-radius: 35px;
+            h1#text-phone {
+                color: #dadada;
+                font-size: .8em;
+                line-height: .7em;
+                height: 2em;
+                bottom: 0;
+                letter-spacing: -10px;
+                margin: 0;
+                text-align: left;
+                width: 100%;
                 box-sizing: border-box;
-                overflow: hidden;
-                background-image: url(https://images.pexels.com/photos/1366907/pexels-photo-1366907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-                background-size: cover;
-                
-                &:before{
-                    content: "";
-                    position: absolute;
-                    height: 30px;
-                    width: 50%;
-                    background: #353742;
-                    left: 25%;
-                    border-radius: 0 0 15px 15px;
-                    z-index: 1;
-                }
-                
-                &:after{
-                    content: "";
-                    width: 100%;
-                    height: 100%;
-                    background: #ffffff30;
-                    position: absolute;
-                    left: -50%;
-                    top: 0px;
-                    transform: skewX(-5deg);
-                    z-index: 0;
-                }
-                
+                padding-left: 10%;
+                transition: all .5s ease;
             }
         }
         
     }
     
-    h1#text-phone {
-        font-size: 1em;
-        text-transform: uppercase;
-        position: relative;
-        left: 10%;
-        background: red;
-        padding: 0 25px;
-        color: white;
-        transform: skew(0deg, -5deg);
-        
-        &:after{
-            content: "phone";
-            position: absolute;
-            color: #21212107;
-            font-size: 2em;
-            z-index: -1;
-            left: 50%;
-            transform: translateX(0px);
-            top: 10%;
-            opacity: 1;
-            transition: all .5s ease-in-out;
-        }
-        
-        &:before{
-            content: "phone";
-            position: absolute;
-            color: #21212107;
-            font-size: 2em;
-            z-index: -1;
-            left: 50%;
-            transform: translateX(0px);
-            top: -100%;
-            opacity: 1;
-            transition: all .5s ease-in-out;
-        }
-        
-        &.active{
-            &:after{
-                opacity: 1;
-                transform: translateX(-50%);
-            }
-            
-            &:before{
-                opacity: 1;
-                transform: translateX(-100%);
-            }
-        }
-    }
+    
+    
+    
     
     h1#text-app {
         font-size: 1em;
@@ -659,7 +878,6 @@
     
     
 }
-
 
 .ads-banner{
     background: #448ef6;

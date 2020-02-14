@@ -10,8 +10,22 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Yellowtail&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
+
+@font-face {
+    font-family: 'Gilroy-bold';
+    src:  url('../fonts/Gilroy/Gilroy-ExtraBold.otf') format('opentype');
+  }
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy/Gilroy-Light.otf') format('opentype');
+}
+
+// https://tinkov.info/gilroy.html
 
 $blue:    #0a4a8f !default;
 $indigo:  #6610f2 !default;
