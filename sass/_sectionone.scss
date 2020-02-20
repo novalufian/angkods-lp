@@ -957,7 +957,7 @@
             border-radius: 20px;
             overflow: hidden;
             border: solid 2px #e2e1e1;
-
+            
             span.loading {
                 position: absolute;
                 width: 70%;
@@ -1037,7 +1037,7 @@
             box-shadow: 10px 1px 35px 0px #cccccc;
         }
     }
-
+    
     h1.text-upload {
         text-align: left;
         font-size: .5em;
@@ -1046,6 +1046,137 @@
         transform: translateX(-25%);
     }
     
+    .date-wrapper{
+        transform: translateX(100%);
+        
+        .date-picker{
+            font-size: 16px;
+            font-weight: bold;
+            
+            .footer{
+                p{
+                    text-align: left;
+                    padding: 0 10px;
+                    margin: 0 0 15px;
+                    color: #adadad;
+                    span{
+                        width: 100px;
+                        color: #adadad;
+                        
+                    }
+                }
+            }
+            
+            .header{
+                p{
+                    text-align: left;
+                    padding: 0 10px;
+                    margin: 0;
+                }
+            }
+            
+            .picker{
+                width: 350px;
+                display: inline-block;
+                margin: 15px 0 25px;
+                
+                span{
+                    width: 50px;
+                    float: left;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    &.gray-date{
+                        color: #d4d4d4;
+                    }
+
+                    &.select{
+                        background: #f4ff61;
+                    }
+                }
+            }
+        }
+    }
+    
+    .date-picker-text {
+        position: absolute;
+        left: 10%;
+        
+        h1{
+            font-size: .5em;
+            text-align: left;
+            letter-spacing: -5px;
+            margin: 0;
+            span{
+                color: #ff3796;
+            }
+        }
+    }
+
+    .city-wrapper {
+        position: absolute;
+        height: 300px;
+        right: 0;
+        width: 55%;
+        display: flex;
+        overflow: hidden;
+        flex-wrap: nowrap;
+
+        .city-targeting{
+            background: #21212195;
+            height: 300px;
+            background-position: center;
+            background-size: cover;
+            background-blend-mode: overlay;
+            font-size: .2em;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            min-width: 300px;
+            margin: 0 15px;
+            border-radius: 20px;
+    
+            img{
+                margin-bottom: 20px;
+            }
+    
+            &.semarang{
+                background-image: url(https://images.pexels.com/photos/2810699/pexels-photo-2810699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            }
+            &.bali{
+                background-image: url(https://images.pexels.com/photos/1643130/pexels-photo-1643130.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            }
+            
+            &.jakarta{
+                background-image: url(https://images.pexels.com/photos/2126389/pexels-photo-2126389.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            }
+    
+            &.malang{
+                background-image: url(https://images.pexels.com/photos/2291648/pexels-photo-2291648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+            }
+    
+            &.jogja{
+                background-image: url(https://images.pexels.com/photos/746994/pexels-photo-746994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+            }
+    
+            &.samarinda{
+                background-image: url(https://images.pexels.com/photos/1877078/pexels-photo-1877078.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            }
+        }
+    }
+
+    
+
+    .targeting-text{
+        position: absolute;
+        font-size: .6em;
+        left: 10%;
+        width: 10%;
+        line-height: 1em;
+        letter-spacing: -5px;
+    }
     
 }
 

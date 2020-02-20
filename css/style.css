@@ -12265,6 +12265,144 @@ a.text-white:hover, a.text-white:focus {
           transform: translateX(-25%);
 }
 
+#section-six .date-wrapper {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+#section-six .date-wrapper .date-picker {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#section-six .date-wrapper .date-picker .footer p {
+  text-align: left;
+  padding: 0 10px;
+  margin: 0 0 15px;
+  color: #adadad;
+}
+
+#section-six .date-wrapper .date-picker .footer p span {
+  width: 100px;
+  color: #adadad;
+}
+
+#section-six .date-wrapper .date-picker .header p {
+  text-align: left;
+  padding: 0 10px;
+  margin: 0;
+}
+
+#section-six .date-wrapper .date-picker .picker {
+  width: 350px;
+  display: inline-block;
+  margin: 15px 0 25px;
+}
+
+#section-six .date-wrapper .date-picker .picker span {
+  width: 50px;
+  float: left;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#section-six .date-wrapper .date-picker .picker span.gray-date {
+  color: #d4d4d4;
+}
+
+#section-six .date-wrapper .date-picker .picker span.select {
+  background: #f4ff61;
+}
+
+#section-six .date-picker-text {
+  position: absolute;
+  left: 10%;
+}
+
+#section-six .date-picker-text h1 {
+  font-size: .5em;
+  text-align: left;
+  letter-spacing: -5px;
+  margin: 0;
+}
+
+#section-six .date-picker-text h1 span {
+  color: #ff3796;
+}
+
+#section-six .city-wrapper {
+  position: absolute;
+  height: 300px;
+  right: 0;
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+#section-six .city-wrapper .city-targeting {
+  background: #21212195;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  font-size: .2em;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  min-width: 300px;
+  margin: 0 15px;
+  border-radius: 20px;
+}
+
+#section-six .city-wrapper .city-targeting img {
+  margin-bottom: 20px;
+}
+
+#section-six .city-wrapper .city-targeting.semarang {
+  background-image: url(https://images.pexels.com/photos/2810699/pexels-photo-2810699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+#section-six .city-wrapper .city-targeting.bali {
+  background-image: url(https://images.pexels.com/photos/1643130/pexels-photo-1643130.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+#section-six .city-wrapper .city-targeting.jakarta {
+  background-image: url(https://images.pexels.com/photos/2126389/pexels-photo-2126389.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+#section-six .city-wrapper .city-targeting.malang {
+  background-image: url(https://images.pexels.com/photos/2291648/pexels-photo-2291648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+#section-six .city-wrapper .city-targeting.jogja {
+  background-image: url(https://images.pexels.com/photos/746994/pexels-photo-746994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+#section-six .city-wrapper .city-targeting.samarinda {
+  background-image: url(https://images.pexels.com/photos/1877078/pexels-photo-1877078.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+#section-six .targeting-text {
+  position: absolute;
+  font-size: .6em;
+  left: 10%;
+  width: 10%;
+  line-height: 1em;
+  letter-spacing: -5px;
+}
+
 .ads-banner {
   background: #448ef6;
   width: 400px;
