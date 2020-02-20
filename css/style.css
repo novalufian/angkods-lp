@@ -12366,6 +12366,11 @@ a.text-white:hover, a.text-white:focus {
   border-radius: 20px;
 }
 
+#section-six .city-wrapper .city-targeting.city-left-right {
+  -webkit-animation: cityLeftRight 20s infinite linear;
+          animation: cityLeftRight 20s infinite linear;
+}
+
 #section-six .city-wrapper .city-targeting img {
   margin-bottom: 20px;
 }
@@ -12881,6 +12886,30 @@ nav#main-navbar {
   }
   100% {
     left: 0;
+  }
+}
+
+@-webkit-keyframes cityLeftRight {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: -1000px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes cityLeftRight {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: -1000px;
+  }
+  100% {
+    margin-left: 0px;
   }
 }
 

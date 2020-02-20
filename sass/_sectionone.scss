@@ -1137,6 +1137,10 @@
             min-width: 300px;
             margin: 0 15px;
             border-radius: 20px;
+
+            &.city-left-right{
+                animation: cityLeftRight 20s infinite linear;
+            }
     
             img{
                 margin-bottom: 20px;

@@ -21,3 +21,15 @@
         left: 0;
     }
 }
+
+@keyframes cityLeftRight{
+    0%{
+        margin-left: 0px;
+    }
+    50%{
+        margin-left: -1000px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
