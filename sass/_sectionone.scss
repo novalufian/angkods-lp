@@ -1091,7 +1091,7 @@
                     &.gray-date{
                         color: #d4d4d4;
                     }
-
+                    
                     &.select{
                         background: #f4ff61;
                     }
@@ -1114,7 +1114,7 @@
             }
         }
     }
-
+    
     .city-wrapper {
         position: absolute;
         height: 300px;
@@ -1123,7 +1123,7 @@
         display: flex;
         overflow: hidden;
         flex-wrap: nowrap;
-
+        
         .city-targeting{
             background: #21212195;
             height: 300px;
@@ -1137,15 +1137,15 @@
             min-width: 300px;
             margin: 0 15px;
             border-radius: 20px;
-
+            
             &.city-left-right{
                 animation: cityLeftRight 20s infinite linear;
             }
-    
+            
             img{
                 margin-bottom: 20px;
             }
-    
+            
             &.semarang{
                 background-image: url(https://images.pexels.com/photos/2810699/pexels-photo-2810699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
             }
@@ -1156,23 +1156,23 @@
             &.jakarta{
                 background-image: url(https://images.pexels.com/photos/2126389/pexels-photo-2126389.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
             }
-    
+            
             &.malang{
                 background-image: url(https://images.pexels.com/photos/2291648/pexels-photo-2291648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
             }
-    
+            
             &.jogja{
                 background-image: url(https://images.pexels.com/photos/746994/pexels-photo-746994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
             }
-    
+            
             &.samarinda{
                 background-image: url(https://images.pexels.com/photos/1877078/pexels-photo-1877078.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
             }
         }
     }
-
     
-
+    
+    
     .targeting-text{
         position: absolute;
         font-size: .6em;
@@ -1197,45 +1197,155 @@
 }
 
 .service-section{
-    .card{
-        cursor: pointer;
+    flex-wrap: wrap;
+    
+    .service-item{
+        height: 400px;
+        position: relative;
         
-        img{
-            transition: all .5s ease-in-out;
-            position: relative;
-            z-index: 10;
+        .text{
+            h1,p{
+                margin: 0px;
+                font-size: 16px;
+                line-height: 18px;
+            }
             
+            h1{
+                font-size: 1.8em;
+                letter-spacing: -1px;
+                margin-bottom: 15px;
+                line-height: 1em;
+            }
         }
         
-        .shadow{
-            width: 50%;
-            height: 50%;
-            background: #00000010;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            transform: translate(50%,25%);
-            border-radius: 100%;
-            filter: blur(30px);
+        &.targeting{
+            background: #b6ffea;
         }
         
-        &:hover{
+        &.saving{
+            background: #ffcfcf40;
+            
             img{
-                transform: scale(1.2);
+                position: absolute;
+                right: 0;
+                top: 0;
+                margin: 25%;
+                width: 50%;
+                transform: rotateY(-180deg);
             }
             
-            .title{
-                font-weight: 900;
+            .text{
+                position: absolute;
+                bottom: 50px;
+                left: 0;
+                text-align: center;
+                width: 60%;
+                margin: 0 20%;
+                
+                h1,p{
+                    color: #e6b6b6;
+                }
             }
         }
         
-        .title{
-            transition: all .5s ease-in-out;
-            font-size: 1.1em;
-            line-height: 1em;
-            margin: 10px auto;
-            width: 150px;
+        &.creative{
+            background: #fff3be;
+            
+            .main-img{
+                position: absolute;
+                height: 150%;
+                top: 0;
+                right: 0;
+                transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+                animation: pinwheelService 20s infinite;
+            }
+            
+            .text{
+                position: absolute;
+                top: 50%;
+                left: 5%;
+                text-align: left;
+                width: 40%;
+                transform: translateY(-50%);
+            }
+        }
+        
+        &.monitoring{
+            background: #e1eeff;
+            
+            img{
+                position: absolute;
+                right: 0;
+                bottom: -10%;
+                width: 100%;
+            }
+            
+            .text{
+                position: absolute;
+                top: 50px;
+                left: 0;
+                text-align: center;
+                width: 60%;
+                margin: 0 20%;
+                
+                h1,p{
+                    color: #9db4d2;
+                }
+            }
+        }
+        
+        &.billboard{
+            background: #e1f4f3;
+            
+            .ads{
+                position: absolute;
+                left: -10%;
+                height: 100%;
+                transform: rotateY(-180deg);
+                perspective: 1050px;
+                
+                .main-img{
+                    height: 100%;
+                    position: relative;
+                    z-index: 10;
+                }
+                
+                .ad-content {
+                    position: absolute;
+                    width: 50%;
+                    height: 60%;
+                    background: #f1fa3c;
+                    left: 22%;
+                    top: 17%;
+                    transform: rotateY(-60deg);
+                    animation: adsDisplay 5s infinite linear;
+                    
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        width: 20%;
+                        height: 100%;
+                        background: #ffffff40;
+                        left: 0;
+                    }
+                    
+                    h1{
+                        transform: rotateY(-180deg);
+                    }
+                }
+            }
+
+            .text {
+                position: absolute;
+                right: 5%;
+                top: 40%;
+                width: 45%;
+                text-align: right;
+
+                h1,p{
+                    color: #7ad6d1;
+                }
+            }
         }
     }
 }

@@ -80,13 +80,13 @@
     
     <script type="text/javascript" src="../js/libs/vanilla-tilt.min.js"></script>
     <script type="text/javascript"> 
-        VanillaTilt.init(document.querySelector(".your-element"), {
-            max: 25,
-            speed: 400
+        VanillaTilt.init(document.querySelectorAll(".your-element"), {
+            max: 5,
+            speed: 100
         });
         
         //It also supports NodeList
-        VanillaTilt.init(document.querySelectorAll(".your-element"));
+        // VanillaTilt.init(document.querySelectorAll(".your-element"));
     </script>
 </body>
 </html>

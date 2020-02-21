@@ -33,3 +33,24 @@
         margin-left: 0px;
     }
 }
+
+@keyframes pinwheelService{
+    0%{
+        transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+    }
+    50%{
+        transform: translate(25%, -25%) rotateX(0deg) rotateZ(2000deg);
+    }
+    100%{
+        transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+    }
+}
+
+@keyframes adsDisplay{
+    0%{background: #f1fa3c}
+    20%{background: #fa163f}
+    40%{background: #08ffc8}
+    60%{background: #ed0cef}
+    80%{background: #0028ff}
+    100%{background: #32ff6a}
+}

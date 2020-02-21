@@ -12420,48 +12420,166 @@ a.text-white:hover, a.text-white:focus {
   line-height: 1.2em;
 }
 
-.service-section .card {
-  cursor: pointer;
+.service-section {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.service-section .card img {
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+.service-section .service-item {
+  height: 400px;
+  position: relative;
+}
+
+.service-section .service-item .text h1, .service-section .service-item .text p {
+  margin: 0px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.service-section .service-item .text h1 {
+  font-size: 1.8em;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+  line-height: 1em;
+}
+
+.service-section .service-item.targeting {
+  background: #b6ffea;
+}
+
+.service-section .service-item.saving {
+  background: #ffcfcf40;
+}
+
+.service-section .service-item.saving img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 25%;
+  width: 50%;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.service-section .service-item.saving .text {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  text-align: center;
+  width: 60%;
+  margin: 0 20%;
+}
+
+.service-section .service-item.saving .text h1, .service-section .service-item.saving .text p {
+  color: #e6b6b6;
+}
+
+.service-section .service-item.creative {
+  background: #fff3be;
+}
+
+.service-section .service-item.creative .main-img {
+  position: absolute;
+  height: 150%;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+          transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+  -webkit-animation: pinwheelService 20s infinite;
+          animation: pinwheelService 20s infinite;
+}
+
+.service-section .service-item.creative .text {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  text-align: left;
+  width: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.service-section .service-item.monitoring {
+  background: #e1eeff;
+}
+
+.service-section .service-item.monitoring img {
+  position: absolute;
+  right: 0;
+  bottom: -10%;
+  width: 100%;
+}
+
+.service-section .service-item.monitoring .text {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  text-align: center;
+  width: 60%;
+  margin: 0 20%;
+}
+
+.service-section .service-item.monitoring .text h1, .service-section .service-item.monitoring .text p {
+  color: #9db4d2;
+}
+
+.service-section .service-item.billboard {
+  background: #e1f4f3;
+}
+
+.service-section .service-item.billboard .ads {
+  position: absolute;
+  left: -10%;
+  height: 100%;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-perspective: 1050px;
+          perspective: 1050px;
+}
+
+.service-section .service-item.billboard .ads .main-img {
+  height: 100%;
   position: relative;
   z-index: 10;
 }
 
-.service-section .card .shadow {
-  width: 50%;
-  height: 50%;
-  background: #00000010;
+.service-section .service-item.billboard .ads .ad-content {
   position: absolute;
-  top: 0;
+  width: 50%;
+  height: 60%;
+  background: #f1fa3c;
+  left: 22%;
+  top: 17%;
+  -webkit-transform: rotateY(-60deg);
+          transform: rotateY(-60deg);
+  -webkit-animation: adsDisplay 5s infinite linear;
+          animation: adsDisplay 5s infinite linear;
+}
+
+.service-section .service-item.billboard .ads .ad-content:after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background: #ffffff40;
   left: 0;
-  z-index: 0;
-  -webkit-transform: translate(50%, 25%);
-          transform: translate(50%, 25%);
-  border-radius: 100%;
-  -webkit-filter: blur(30px);
-          filter: blur(30px);
 }
 
-.service-section .card:hover img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+.service-section .service-item.billboard .ads .ad-content h1 {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }
 
-.service-section .card:hover .title {
-  font-weight: 900;
+.service-section .service-item.billboard .text {
+  position: absolute;
+  right: 5%;
+  top: 40%;
+  width: 45%;
+  text-align: right;
 }
 
-.service-section .card .title {
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  font-size: 1.1em;
-  line-height: 1em;
-  margin: 10px auto;
-  width: 150px;
+.service-section .service-item.billboard .text h1, .service-section .service-item.billboard .text p {
+  color: #7ad6d1;
 }
 
 #about-us {
@@ -12910,6 +13028,78 @@ nav#main-navbar {
   }
   100% {
     margin-left: 0px;
+  }
+}
+
+@-webkit-keyframes pinwheelService {
+  0% {
+    -webkit-transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+            transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: translate(25%, -25%) rotateX(0deg) rotateZ(2000deg);
+            transform: translate(25%, -25%) rotateX(0deg) rotateZ(2000deg);
+  }
+  100% {
+    -webkit-transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+            transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+  }
+}
+
+@keyframes pinwheelService {
+  0% {
+    -webkit-transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+            transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: translate(25%, -25%) rotateX(0deg) rotateZ(2000deg);
+            transform: translate(25%, -25%) rotateX(0deg) rotateZ(2000deg);
+  }
+  100% {
+    -webkit-transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+            transform: translate(25%, -25%) rotateX(0deg) rotateZ(0);
+  }
+}
+
+@-webkit-keyframes adsDisplay {
+  0% {
+    background: #f1fa3c;
+  }
+  20% {
+    background: #fa163f;
+  }
+  40% {
+    background: #08ffc8;
+  }
+  60% {
+    background: #ed0cef;
+  }
+  80% {
+    background: #0028ff;
+  }
+  100% {
+    background: #32ff6a;
+  }
+}
+
+@keyframes adsDisplay {
+  0% {
+    background: #f1fa3c;
+  }
+  20% {
+    background: #fa163f;
+  }
+  40% {
+    background: #08ffc8;
+  }
+  60% {
+    background: #ed0cef;
+  }
+  80% {
+    background: #0028ff;
+  }
+  100% {
+    background: #32ff6a;
   }
 }
 
