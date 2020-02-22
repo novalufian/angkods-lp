@@ -12430,10 +12430,20 @@ a.text-white:hover, a.text-white:focus {
   position: relative;
 }
 
+.service-section .service-item h1.service-title {
+  position: absolute;
+  font-size: 8em;
+  letter-spacing: -7px;
+  color: #ededed;
+  left: 10%;
+  white-space: nowrap;
+  top: 50px;
+}
+
 .service-section .service-item .text h1, .service-section .service-item .text p {
   margin: 0px;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 22px;
 }
 
 .service-section .service-item .text h1 {
@@ -12443,8 +12453,48 @@ a.text-white:hover, a.text-white:focus {
   line-height: 1em;
 }
 
+.service-section .service-item.coverage-area img.main-img {
+  position: absolute;
+  width: 80%;
+  right: -15%;
+  z-index: 20;
+  top: -20%;
+  -webkit-animation: droneMovement 3s infinite linear;
+          animation: droneMovement 3s infinite linear;
+}
+
+.service-section .service-item.coverage-area .text {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  width: 50%;
+}
+
 .service-section .service-item.targeting {
   background: #b6ffea;
+}
+
+.service-section .service-item.targeting .text {
+  position: absolute;
+  right: 10%;
+  width: 60%;
+  text-align: right;
+  top: 10%;
+}
+
+.service-section .service-item.targeting .text h1, .service-section .service-item.targeting .text p {
+  color: #6aad9a;
+}
+
+.service-section .service-item.targeting .main-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-clip-path: circle(25% at 50% 50%);
+          clip-path: circle(25% at 50% 50%);
+  -webkit-animation: tergetingMovement 5s infinite linear;
+          animation: tergetingMovement 5s infinite linear;
 }
 
 .service-section .service-item.saving {
@@ -12523,6 +12573,22 @@ a.text-white:hover, a.text-white:focus {
   color: #9db4d2;
 }
 
+.service-section .service-item.best-quality img.main-img {
+  position: absolute;
+  bottom: 0;
+  left: calc((100% - 250px )/ 2);
+  width: 250px;
+  height: 250px;
+  -webkit-animation: pionBounce 1.5s infinite;
+          animation: pionBounce 1.5s infinite;
+}
+
+.service-section .service-item.best-quality .text {
+  width: 90%;
+  margin: 15% 5%;
+  text-align: center;
+}
+
 .service-section .service-item.billboard {
   background: #e1f4f3;
 }
@@ -12582,16 +12648,126 @@ a.text-white:hover, a.text-white:focus {
   color: #7ad6d1;
 }
 
+.partnership-section {
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.partnership-section .partnership-title {
+  font-size: 8em;
+  letter-spacing: -7px;
+  top: 10%;
+  left: 10%;
+  color: #ededed;
+  width: 100%;
+  text-align: right;
+}
+
+.partnership-section .partnership-img-wrapper {
+  white-space: nowrap;
+  margin: 50px auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.partnership-section .partnership-img-wrapper .item {
+  display: inline-block;
+  height: 75px;
+  margin: 0 15px;
+}
+
+.partnership-section .partnership-img-wrapper:before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 150px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(100%, white), color-stop(0%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(right, white 100%, rgba(255, 255, 255, 0) 0%);
+  left: 0;
+  top: 0;
+}
+
+.partnership-section .partnership-img-wrapper:after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 150px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(100%, rgba(255, 255, 255, 0)), color-stop(0%, white));
+  background: linear-gradient(right, rgba(255, 255, 255, 0) 100%, white 0%);
+  right: 0;
+  top: 0;
+}
+
+.plan-section {
+  background: #f6f6f6;
+}
+
+.plan-section h1.plan-title {
+  position: absolute;
+  font-size: 18em;
+  top: 2.5%;
+  color: #ededed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  letter-spacing: -19px;
+}
+
+.plan-section .planing-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+}
+
+.plan-section .planing-item.first-item {
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.plan-section .planing-item.midle-item {
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+}
+
+.plan-section .planing-item.last-item {
+  -webkit-transform: translateX(10%) translateY(7.5%);
+          transform: translateX(10%) translateY(7.5%);
+}
+
+.plan-section .planing-item img.main-img {
+  position: relative;
+  width: 40px;
+  margin: 0 auto;
+  -webkit-filter: drop-shadow(0px 10px 5px #ffe75e80);
+          filter: drop-shadow(0px 10px 5px #ffe75e80);
+}
+
+.plan-section .planing-item .text {
+  display: block;
+  width: 100%;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.plan-section .planing-item .text h1 {
+  font-size: 16px;
+  color: #49566f;
+  margin: 0 0 20px;
+}
+
+.plan-section .planing-item .text p {
+  font-size: 14px;
+  color: #49566f80;
+}
+
 #about-us {
   background: #f9f9f9 !important;
 }
 
 #faq {
   background: #08ffc8 !important;
-}
-
-#plan {
-  background: #fff6da !important;
 }
 
 .text-dark {
@@ -13100,6 +13276,152 @@ nav#main-navbar {
   }
   100% {
     background: #32ff6a;
+  }
+}
+
+@-webkit-keyframes droneMovement {
+  0% {
+    -webkit-transform: translate(0px, -20px);
+            transform: translate(0px, -20px);
+  }
+  45% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0px, -20px);
+            transform: translate(0px, -20px);
+  }
+}
+
+@keyframes droneMovement {
+  0% {
+    -webkit-transform: translate(0px, -20px);
+            transform: translate(0px, -20px);
+  }
+  45% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0px, -20px);
+            transform: translate(0px, -20px);
+  }
+}
+
+@-webkit-keyframes pionBounce {
+  0% {
+    height: 230px;
+    width: 260px;
+    bottom: 0px;
+    left: calc((100% - 260px )/ 2);
+    -webkit-transform: translateX(-20px) scale(0.9);
+            transform: translateX(-20px) scale(0.9);
+  }
+  25% {
+    height: 270px;
+    width: 240px;
+    bottom: 25px;
+    left: calc((100% - 240px )/ 2);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    height: 230px;
+    width: 260px;
+    bottom: 0px;
+    left: calc((100% - 260px )/ 2);
+    -webkit-transform: translateX(20px) scale(1.1);
+            transform: translateX(20px) scale(1.1);
+  }
+  75% {
+    height: 270px;
+    width: 240px;
+    bottom: 25px;
+    left: calc((100% - 240px )/ 2);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    height: 230px;
+    width: 260px;
+    bottom: 0px;
+    left: calc((100% - 260px )/ 2);
+    -webkit-transform: translateX(-20px) scale(0.9);
+            transform: translateX(-20px) scale(0.9);
+  }
+}
+
+@keyframes pionBounce {
+  0% {
+    height: 230px;
+    width: 260px;
+    bottom: 0px;
+    left: calc((100% - 260px )/ 2);
+    -webkit-transform: translateX(-20px) scale(0.9);
+            transform: translateX(-20px) scale(0.9);
+  }
+  25% {
+    height: 270px;
+    width: 240px;
+    bottom: 25px;
+    left: calc((100% - 240px )/ 2);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    height: 230px;
+    width: 260px;
+    bottom: 0px;
+    left: calc((100% - 260px )/ 2);
+    -webkit-transform: translateX(20px) scale(1.1);
+            transform: translateX(20px) scale(1.1);
+  }
+  75% {
+    height: 270px;
+    width: 240px;
+    bottom: 25px;
+    left: calc((100% - 240px )/ 2);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    height: 230px;
+    width: 260px;
+    bottom: 0px;
+    left: calc((100% - 260px )/ 2);
+    -webkit-transform: translateX(-20px) scale(0.9);
+            transform: translateX(-20px) scale(0.9);
+  }
+}
+
+@-webkit-keyframes tergetingMovement {
+  0% {
+    -webkit-clip-path: circle(20% at 25% 50%);
+            clip-path: circle(20% at 25% 50%);
+  }
+  50% {
+    -webkit-clip-path: circle(20% at 75% 50%);
+            clip-path: circle(20% at 75% 50%);
+  }
+  100% {
+    -webkit-clip-path: circle(20% at 25% 50%);
+            clip-path: circle(20% at 25% 50%);
+  }
+}
+
+@keyframes tergetingMovement {
+  0% {
+    -webkit-clip-path: circle(20% at 25% 50%);
+            clip-path: circle(20% at 25% 50%);
+  }
+  50% {
+    -webkit-clip-path: circle(20% at 75% 50%);
+            clip-path: circle(20% at 75% 50%);
+  }
+  100% {
+    -webkit-clip-path: circle(20% at 25% 50%);
+            clip-path: circle(20% at 25% 50%);
   }
 }
 
