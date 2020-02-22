@@ -11465,24 +11465,28 @@ a.text-white:hover, a.text-white:focus {
 
 #section-four #food-section {
   background: #fcf8e8;
-  width: 50%;
+  width: 0;
   height: 100vh;
   position: absolute;
   left: 0;
   top: 0;
+  overflow: hidden;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
 
 #section-four #food-section #food-img {
   position: fixed;
-  bottom: 0;
+  bottom: -30%;
+  opacity: 0;
   right: 400px;
   width: 800px;
   -webkit-filter: drop-shadow(-25px 15px 20px #21212120);
           filter: drop-shadow(-25px 15px 20px #21212120);
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
 }
 
 #section-four #food-section .food-text {
@@ -11490,8 +11494,9 @@ a.text-white:hover, a.text-white:focus {
   letter-spacing: -5px;
   color: #fa163f;
   position: absolute;
-  left: 80px;
+  left: -80px;
   top: 25vh;
+  opacity: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-style: initial;
@@ -11503,7 +11508,8 @@ a.text-white:hover, a.text-white:focus {
   width: 300px;
   text-align: left;
   position: absolute;
-  left: 80px;
+  left: -80px;
+  opacity: 0;
   top: calc(25vh + 6em);
 }
 
@@ -11512,7 +11518,8 @@ a.text-white:hover, a.text-white:focus {
   font-size: 16px;
   line-height: 16px;
   text-align: left;
-  bottom: 10vh;
+  bottom: -10vh;
+  opacity: 0;
   left: 60px;
   color: #fa163f;
   font-family: 'Gilroy-bold';
@@ -11534,9 +11541,10 @@ a.text-white:hover, a.text-white:focus {
 
 #section-four #drink-section {
   background: #ffd739;
-  width: 50%;
+  width: 0px;
   height: 100vh;
   position: absolute;
+  overflow: hidden;
   right: 0;
   top: 0;
   -webkit-transition: all .5s ease-in-out;
@@ -11547,7 +11555,8 @@ a.text-white:hover, a.text-white:focus {
   position: fixed;
   width: 200px;
   left: calc(50% - 50px);
-  bottom: 0;
+  bottom: -30%;
+  opacity: 0;
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
   z-index: 10;
@@ -11560,13 +11569,16 @@ a.text-white:hover, a.text-white:focus {
 #section-four #drink-section #orange-img {
   position: fixed;
   width: 300px;
-  bottom: 50px;
+  bottom: -40%;
+  opacity: 0;
   left: calc(50% + 40px);
   z-index: 5;
   -webkit-filter: drop-shadow(5px 55px 20px #ffa41b30);
           filter: drop-shadow(5px 55px 20px #ffa41b30);
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  -webkit-animation-delay: .75s;
+          animation-delay: .75s;
 }
 
 #section-four #drink-section .drink-text {
@@ -11574,7 +11586,8 @@ a.text-white:hover, a.text-white:focus {
   letter-spacing: -5px;
   color: #fff;
   position: absolute;
-  right: 80px;
+  right: -80px;
+  opacity: 0;
   top: 25vh;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -11587,7 +11600,8 @@ a.text-white:hover, a.text-white:focus {
   width: 350px;
   text-align: right;
   position: absolute;
-  right: 80px;
+  right: -80px;
+  opacity: 0;
   top: calc(25vh + 6em);
   color: #fff;
 }
@@ -11597,7 +11611,8 @@ a.text-white:hover, a.text-white:focus {
   font-size: 16px;
   line-height: 16px;
   text-align: left;
-  bottom: 10vh;
+  bottom: -10vh;
+  opacity: 0;
   right: 60px;
   color: orange;
   font-family: 'Gilroy-bold';
@@ -11635,7 +11650,7 @@ a.text-white:hover, a.text-white:focus {
 }
 
 #section-four.promotion #food-section {
-  width: 35vh;
+  width: 35vh !important;
   height: 70vh;
   top: 15vh;
   left: calc(50% - 35vh);
@@ -11643,13 +11658,17 @@ a.text-white:hover, a.text-white:focus {
 }
 
 #section-four.promotion #food-section #food-img {
-  bottom: 50%;
+  bottom: 20% !important;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
 }
 
+#section-four.promotion #food-section p.text {
+  opacity: 0 !important;
+}
+
 #section-four.promotion #drink-section {
-  width: 35vh;
+  width: 35vh !important;
   height: 70vh;
   top: 15vh;
   right: calc(50% - 35vh);
@@ -11658,22 +11677,50 @@ a.text-white:hover, a.text-white:focus {
 
 #section-four.promotion #drink-section #orange-img,
 #section-four.promotion #drink-section #drink-img {
-  bottom: 50%;
+  bottom: 20% !important;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
+}
+
+#section-four.promotion #drink-section p.text {
+  opacity: 0 !important;
 }
 
 #section-five {
   position: absolute;
   font-size: 10em;
-  right: 0;
+  right: 50%;
+  left: 50%;
   bottom: 0;
   text-align: center;
   z-index: 10;
   margin: 0;
-  overflow: hidden;
-  width: 100%;
+  width: 0%;
   height: 100vh;
+}
+
+#section-five.section-five-transition:after {
+  content: "";
+  width: 0px;
+  height: 100vh;
+  position: absolute;
+  background: #88e1f260;
+  left: 50%;
+  z-index: 1;
+  -webkit-animation: section5ToLeft .9s forwards;
+          animation: section5ToLeft .9s forwards;
+}
+
+#section-five.section-five-transition:before {
+  content: "";
+  width: 0px;
+  height: 100vh;
+  position: absolute;
+  background: #88e1f260;
+  right: 50%;
+  z-index: 1;
+  -webkit-animation: section5ToRight .9s forwards;
+          animation: section5ToRight .9s forwards;
 }
 
 #section-five .phone-border-wrapper {
@@ -11682,10 +11729,9 @@ a.text-white:hover, a.text-white:focus {
 
 #section-five .phone-border-wrapper #phone-wrapper {
   position: absolute;
-  right: 0;
   width: auto;
-  -webkit-transition: all .5s ease-in;
-  transition: all .5s ease-in;
+  opacity: 0;
+  right: -150px;
 }
 
 #section-five .phone-border-wrapper #phone-wrapper.box {
@@ -11771,6 +11817,7 @@ a.text-white:hover, a.text-white:focus {
   display: block;
   font-size: 50px;
   top: 80px;
+  z-index: 31;
 }
 
 #section-five .phone-border-wrapper #phone-wrapper #phone .screen .date-time p#phone-date {
@@ -11916,7 +11963,7 @@ a.text-white:hover, a.text-white:focus {
   text-align: center;
   top: 50px;
   color: #2c7873;
-  text-shadow: 1px 2px 0px #ccda46,  -1px -2px 0px #32ff6a,  1px -2px 0px #94fc13,  -1px 2px 0px #22eaca;
+  text-shadow: 1px 2px 0px #ccda46,  -1px -2px 0px #32ff6a,  1px -2px 0px #94fc13,  -1px 2px 0px #22eaca;
 }
 
 #section-five .phone-border-wrapper #phone-wrapper #phone .screen .game img.game-img {
@@ -11959,9 +12006,10 @@ a.text-white:hover, a.text-white:focus {
   position: fixed;
   z-index: -1;
   right: 10%;
-  opacity: .02;
   -webkit-transform: rotateZ(-45deg);
           transform: rotateZ(-45deg);
+  opacity: 0;
+  top: 20%;
 }
 
 #section-five .phone-border-wrapper .chat-highlight {
@@ -11975,15 +12023,17 @@ a.text-white:hover, a.text-white:focus {
 }
 
 #section-five .phone-border-wrapper .chat-highlight.app-conveti-1 {
-  -webkit-transform: translateX(70%) translateY(220%);
-          transform: translateX(70%) translateY(220%);
+  -webkit-transform: translateX(120%) translateY(220%);
+          transform: translateX(120%) translateY(220%);
   z-index: 60;
+  opacity: 0;
 }
 
 #section-five .phone-border-wrapper .chat-highlight.app-conveti-2 {
   z-index: -1;
-  -webkit-transform: translate(-40px, 100px);
-          transform: translate(-40px, 100px);
+  opacity: 0;
+  -webkit-transform: translate(-120px, 100px);
+          transform: translate(-120px, 100px);
 }
 
 #section-five .phone-border-wrapper .chat-highlight img {
@@ -12031,7 +12081,7 @@ a.text-white:hover, a.text-white:focus {
   width: 100%;
 }
 
-#section-five .phone-border-wrapper .text-wrapper h1#text-phone {
+#section-five .phone-border-wrapper .text-wrapper h1.text {
   color: #dadada;
   font-size: .8em;
   line-height: .7em;
@@ -12048,43 +12098,8 @@ a.text-white:hover, a.text-white:focus {
   transition: all .5s ease;
 }
 
-#section-five h1#text-app {
-  font-size: 1em;
-  text-transform: uppercase;
-  position: absolute;
-  padding: 0 25px;
-  line-height: .8em;
-  text-align: left;
-  left: 10%;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  opacity: 0;
-}
-
-#section-five .app-atribute {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#section-five .app-atribute img#play-store {
-  position: absolute;
-  height: 50px;
-  bottom: 10vh;
-  right: 50%;
-  -webkit-transform: translateX(55%);
-          transform: translateX(55%);
-}
-
-#section-five .app-atribute img#app-store {
-  position: absolute;
-  height: 50px;
-  bottom: 10vh;
-  right: 50%;
-  -webkit-transform: translateX(-55%);
-          transform: translateX(-55%);
+#section-five .phone-border-wrapper .text-wrapper h1.text#text-phone {
+  margin-top: 1.6em;
 }
 
 .ads-banner {
@@ -12514,33 +12529,38 @@ nav#main-navbar {
   transition: all .5s ease-in-out;
 }
 
-@-webkit-keyframes up-down {
+.anim-up-down {
+  -webkit-animation: upNdown 5s infinite;
+          animation: upNdown 5s infinite;
+}
+
+@-webkit-keyframes upNdown {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   50% {
-    -webkit-transform: translateY(5%);
-            transform: translateY(5%);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
 }
 
-@keyframes up-down {
+@keyframes upNdown {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   50% {
-    -webkit-transform: translateY(5%);
-            transform: translateY(5%);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
 }
 
@@ -12565,6 +12585,62 @@ nav#main-navbar {
   }
   100% {
     left: 0;
+  }
+}
+
+@-webkit-keyframes section5ToLeft {
+  0% {
+    width: 0px;
+    left: 50%;
+  }
+  40% {
+    width: 400px;
+    left: calc(50% - 400px);
+  }
+  100% {
+    left: -500px;
+  }
+}
+
+@keyframes section5ToLeft {
+  0% {
+    width: 0px;
+    left: 50%;
+  }
+  40% {
+    width: 400px;
+    left: calc(50% - 400px);
+  }
+  100% {
+    left: -500px;
+  }
+}
+
+@-webkit-keyframes section5ToRight {
+  0% {
+    width: 0px;
+    right: 50%;
+  }
+  40% {
+    width: 400px;
+    right: calc(50% - 400px);
+  }
+  100% {
+    right: -500px;
+  }
+}
+
+@keyframes section5ToRight {
+  0% {
+    width: 0px;
+    right: 50%;
+  }
+  40% {
+    width: 400px;
+    right: calc(50% - 400px);
+  }
+  100% {
+    right: -500px;
   }
 }
 

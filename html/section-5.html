@@ -155,17 +155,104 @@
                 <div class="col-md-8 d-flex justify-content-center align-items-center phone-border-wrapper">
                     
                     <div class="text-wrapper">
-                        <h1 id="text-phone" class="gilroy-bold d-flex align-items-center">Phone</h1>
-                        <h1 id="text-phone" class="gilroy-bold d-flex align-items-center">Mobile app</h1>
-                        <h1 id="text-phone" class="gilroy-bold d-flex align-items-center">Games</h1>
+                        <h1 id="text-phone" class="gilroy-bold d-flex align-items-center text">Phone</h1>
+                        <h1 id="text-app" class="gilroy-bold d-flex align-items-center text">Mobile app</h1>
+                        <h1 id="text-game" class="gilroy-bold d-flex align-items-center text">Games</h1>
                     </div>
                 </div>
 
             </div>
-                <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script> -->
-                <script src="../js/libs/gsap.js"></script>
-                <script src="../js/libs/CSSRulePlugin.js"></script>
+
+            <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script> -->
+            <script src="../js/libs/gsap.js"></script>
+            <script src="../js/libs/CSSRulePlugin.js"></script>
+
+            <script>
+                var tl = new TimelineMax();
+                tl
+                .add(
+                    TweenLite.to("#section-five", 0.5, {css:{className:'+=d-flex flex-row align-items-center justify-content-center bg-white section-five-transition'}}), 
+                    .4
+                )
+                .to(
+                    "#section-five",
+                    {duration : 1, width: "100%", left : 0, right: 0, ease : Expo.easeIn},
+                    .5
+                )
+                .to(
+                    "#phone-wrapper", 
+                    {duration : 1.5 , right : 0, opacity : 1, rotationY : 5, rotationZ : -5, ease : Expo.easeOut},
+                    1.25
+                )
+
+                .to(
+                    "#text-phone",
+                    {duration : .25, marginTop : 0, ease : Expo.easeIn},
+                    1.75
+                )
+
+                .to(
+                    "#phone-wrapper", 
+                    {duration : .5 , right : 0, opacity : 1, rotationY : 0, rotationZ : 0, ease : Expo.easeOut},
+                    3
+                )
+
+                .to(
+                    [".date-time", ".lock-screen"],
+                    {duration : .5, y : "-210%", ease : Expo.easeOut},
+                    3.3
+                )
+
+                .to(
+                    "#text-phone",
+                    {duration : .25, marginTop : "-2em", ease : Expo.easeIn},
+                    3.5
+                )
+
+                .to(
+                    ".app-conveti-1",
+                    {duration : .75, x : "70%", opacity : 1, ease : Expo.easeIn},
+                    3.6
+                )
+
+                .to(
+                    ".app-conveti-2",
+                    {duration : .75, x : "-40px", opacity : 1, ease : Expo.easeIn},
+                    3.6
+                )
+
+                .to(
+                    ".app-conveti-2",
+                    {duration : .75, x : "140px", opacity : 0, ease : Expo.easeIn},
+                    5
+                )
+                .to(
+                    ".app-conveti-1",
+                    {duration : .75, x : "-70%", opacity : 0, ease : Expo.easeIn},
+                    5
+                )
+                .to(
+                    ".application",
+                    {duration : .5, x : "-120%", opacity : 0, ease : Expo.easeIn},
+                    5.2
+                )
+
+                .to(
+                    "#text-phone",
+                    {duration : .25, marginTop : "-4em", ease : Expo.easeIn},
+                    5.3
+                )
+
+                .to(
+                    ".console-pad",
+                    {duration : .25, opacity : .03, ease : Expo.easeIn},
+                    5.5
+                )
+                
+
+                tl.play();
+            </script>
         </body>
         </html>
         

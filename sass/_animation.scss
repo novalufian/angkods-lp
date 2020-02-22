@@ -1,12 +1,16 @@
-@keyframes up-down{
+.anim-up-down{
+    animation: upNdown 5s infinite;
+}
+
+@keyframes upNdown{
     0%{
-        transform: translateY(0);
+        transform: translateY(-50px);
     }
     50%{
-        transform: translateY(5%);
+        transform: translateY(0px);
     }
     100%{
-        transform: translateY(0);
+        transform: translateY(-50px);
     }
 }
 
@@ -19,5 +23,34 @@
     }
     100%{
         left: 0;
+    }
+}
+
+@keyframes section5ToLeft{
+    0%{
+        width: 0px;
+        left: 50%;
+    }
+    40%{
+        width: 400px;
+        left: calc(50% - 400px);
+    }
+    100%{
+        left: -500px;
+    }
+}
+
+
+@keyframes section5ToRight{
+    0%{
+        width: 0px;
+        right: 50%;
+    }
+    40%{
+        width: 400px;
+        right: calc(50% - 400px);
+    }
+    100%{
+        right: -500px;
     }
 }

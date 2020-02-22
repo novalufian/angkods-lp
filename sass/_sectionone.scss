@@ -282,20 +282,23 @@
     
     #food-section{
         background : #fcf8e8;
-        width: 50%;
+        width: 0;
         height: 100vh;
         position: absolute;
         left: 0;
         top: 0;
+        overflow: hidden;
         transition: all .5s ease-in-out;
         
         #food-img{
             position: fixed;
-            bottom: 0;
+            bottom: -30%;
+            opacity: 0;
             right: 400px;
             width: 800px;
             filter: drop-shadow(-25px 15px 20px #21212120);
             transition: all .5s ease-in-out;
+            animation-delay: .5s;
         }
         
         .food-text {
@@ -303,8 +306,9 @@
             letter-spacing: -5px;
             color: #fa163f;
             position: absolute;
-            left: 80px;
+            left: -80px;
             top: 25vh;
+            opacity: 0;
             transform: translateY(-50%);
             font-style: initial;
         }
@@ -315,7 +319,8 @@
             width: 300px;
             text-align: left;
             position: absolute;
-            left: 80px;
+            left: -80px;
+            opacity: 0;
             top: calc(25vh + 6em);
         }
         
@@ -324,7 +329,8 @@
             font-size: 16px;
             line-height: 16px;
             text-align: left;
-            bottom: 10vh;
+            bottom: -10vh;
+            opacity: 0;
             left: 60px;
             color: #fa163f;
             font-family: 'Gilroy-bold';
@@ -345,9 +351,10 @@
     
     #drink-section{
         background: #ffd739;
-        width: 50%;
+        width: 0px;
         height: 100vh;
         position: absolute;
+        overflow: hidden;
         right: 0;
         top: 0;
         transition: all .5s ease-in-out;
@@ -356,7 +363,8 @@
             position: fixed;
             width: 200px;
             left: calc(50% - 50px);
-            bottom: 0;
+            bottom: -30%;
+            opacity: 0;
             transform: rotate(15deg);
             z-index: 10;
             filter: drop-shadow(5px 5px 10px #21212110);
@@ -366,11 +374,14 @@
         #orange-img {
             position: fixed;
             width: 300px;
-            bottom: 50px;
+            bottom: -40%;
+            opacity: 0;
             left: calc(50% + 40px);
             z-index: 5;
             filter: drop-shadow(5px 55px 20px #ffa41b30);
             transition: all .5s ease-in-out;
+            animation-delay: .75s;
+
         }
         
         .drink-text{
@@ -378,7 +389,8 @@
             letter-spacing: -5px;
             color: #fff;
             position: absolute;
-            right: 80px;
+            right: -80px;
+            opacity: 0;
             top: 25vh;
             transform: translateY(-50%);
             font-style: initial;
@@ -390,7 +402,8 @@
             width: 350px;
             text-align: right;
             position: absolute;
-            right: 80px;
+            right: -80px;
+            opacity: 0;
             top: calc(25vh + 6em);
             color: #fff;
         }
@@ -400,7 +413,8 @@
             font-size: 16px;
             line-height: 16px;
             text-align: left;
-            bottom: 10vh;
+            bottom: -10vh;
+            opacity: 0;
             right: 60px;
             color: orange;
             font-family: 'Gilroy-bold';
@@ -438,21 +452,25 @@
     
     &.promotion{
         #food-section{
-            width: 35vh;
+            width: 35vh !important;
             height: 70vh;
             top: 15vh;
             left: calc(50% - 35vh);
             border-radius: 2000px 0 0 2000px;
             
             #food-img{
-                bottom: 50%;
+                bottom: 20% !important;
                 transform: translateY(50%);
+            }
+
+            p.text{
+                opacity: 0 !important;
             }
         }
         
         
         #drink-section{
-            width: 35vh;
+            width: 35vh !important;
             height: 70vh;
             top: 15vh;
             right: calc(50% - 35vh);
@@ -460,8 +478,12 @@
             
             #orange-img,
             #drink-img{
-                bottom: 50%;
+                bottom: 20% !important;
                 transform: translateY(50%);
+            }
+
+            p.text{
+                opacity: 0 !important;
             }
         }
     }
@@ -470,23 +492,54 @@
 #section-five{
     position: absolute;
     font-size: 10em;
-    right: 0;
+    right: 50%;
+    left: 50%;
     bottom: 0;
     text-align: center;
     z-index: 10;
     margin: 0;
-    overflow: hidden;
-    width: 100%;
+    // overflow: hidden;
+    width: 0%;
     height: 100vh;
+
+    &.section-five-transition {
+
+        &:after{
+            content: "";
+            width: 0px;
+            height: 100vh;
+            position: absolute;
+            background: #88e1f260;
+            left: 50%;
+            z-index: 1;
+            animation: section5ToLeft .9s forwards;
+        }
+        
+    }
+    
+    &.section-five-transition {
+
+        &:before{
+            content: "";
+            width: 0px;
+            height: 100vh;
+            position: absolute;
+            background: #88e1f260;
+            right: 50%;
+            z-index: 1;
+            animation: section5ToRight .9s forwards;
+
+        }
+    }
     
     .phone-border-wrapper{
         height: 100vh;
         
         #phone-wrapper{
             position: absolute;
-            right: 0;
             width: auto;
-            transition: all .5s ease-in;
+            opacity: 0;
+            right: -150px;
             
             &.box{
                 transform: rotateZ(-5deg) rotateY(5deg) translateY(5%);
@@ -560,6 +613,7 @@
                         display: block;
                         font-size: 50px;
                         top: 80px;
+                        z-index: 31;
                         
                         p#phone-date {
                             font-size: 12px;
@@ -743,8 +797,10 @@
             position: fixed;
             z-index: -1;
             right: 10%;
-            opacity: .02;
+            // opacity: .02;
             transform: rotateZ(-45deg);
+            opacity: 0;
+            top: 20%;
         }
         
         .chat-highlight {
@@ -756,13 +812,15 @@
             border-radius: 30px;
             
             &.app-conveti-1{
-                transform: translateX(70%) translateY(220%);
+                transform: translateX(120%) translateY(220%);
                 z-index: 60;
+                opacity: 0;
             }
             
             &.app-conveti-2 {
                 z-index: -1;
-                transform: translate(-40px, 100px);
+                opacity: 0;
+                transform: translate(-120px, 100px);
             }
             
             img {
@@ -813,7 +871,7 @@
             overflow: hidden;
             width: 100%;
             
-            h1#text-phone {
+            h1.text {
                 color: #dadada;
                 font-size: .8em;
                 line-height: .7em;
@@ -826,52 +884,11 @@
                 box-sizing: border-box;
                 padding-left: 10%;
                 transition: all .5s ease;
+
+                &#text-phone{
+                    margin-top: 1.6em;
+                }
             }
-        }
-        
-    }
-    
-    
-    
-    
-    
-    h1#text-app {
-        font-size: 1em;
-        text-transform: uppercase;
-        position: absolute;
-        padding: 0 25px;
-        line-height: .8em;
-        text-align: left;
-        left: 10%;
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    
-    .app-atribute{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        
-        img#play-store {
-            position: absolute;
-            height: 50px;
-            bottom: 10vh;
-            right: 50%;
-            transform: translateX(55%);
-        }
-        
-        img#app-store {
-            position: absolute;
-            height: 50px;
-            bottom: 10vh;
-            right: 50%;
-            transform: translateX(-55%);
-        } 
-        
-        .app-preview{
-            
         }
         
     }
