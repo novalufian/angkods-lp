@@ -1520,10 +1520,75 @@
     }
 }
 
+.showcase-section{
+    // background: #f6f6f6;
+    // background: #dbff3d;
+    background: #fffdf9;
+
+    h1.showcase-title {
+        position: absolute;
+        font-size: 18em;
+        top: 2.5%;
+        color: #ededed;
+        left: 50%;
+        transform: translateX(-50%);
+        letter-spacing: -19px;
+    }
+
+    .thumbnail{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        left: 0;
+        bottom: 0;
+        box-shadow: 0px 0px 30px 10px #ececec40;
+
+        .item{
+            position: relative;
+            width: calc(100% / 6);
+            height: 150px;
+            background: #ffffff50;
+            margin: 0px;
+            float: left;
+
+            &.active{
+                background: #dbff3d;
+            }
+        }
+    }
+
+    .main-slide {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 5;
+
+        .slide-item {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            float: left;
+
+            img.logo {
+                position: absolute;
+                width: 150px;
+            }
+        }
+    }
+
+    
+}
+
 #about-us{
     background: #f9f9f9 !important;
 }
 
 #faq{
     background: #08ffc8 !important;
+}
+
+#show-case{
+    margin-bottom: 700px;
 }
