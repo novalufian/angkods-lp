@@ -12870,6 +12870,73 @@ footer.footer .footer-row .footer-item img.social-icon {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px;
+  cursor: pointer;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.plan-section .planing-item:hover {
+  -webkit-box-shadow: 0px 45px 40px -45px #21212130;
+          box-shadow: 0px 45px 40px -45px #21212130;
+}
+
+.plan-section .planing-item:hover .detail-link {
+  width: 120px;
+  background: #dbff3d;
+}
+
+.plan-section .planing-item:hover img.main-img {
+  -webkit-transform: scale(1.5) translateY(-50%);
+          transform: scale(1.5) translateY(-50%);
+}
+
+.plan-section .planing-item .detail-link {
+  position: relative;
+  width: 100%;
+  text-decoration: none;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.plan-section .planing-item .detail-link p {
+  margin: 0;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.plan-section .planing-item .detail-link img.next {
+  opacity: 0;
+  position: absolute;
+  height: 16px;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translate(-25px, -50%);
+          transform: translate(-25px, -50%);
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.plan-section .planing-item .detail-link:hover {
+  width: 150px;
+}
+
+.plan-section .planing-item .detail-link:hover p {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.plan-section .planing-item .detail-link:hover img.next {
+  opacity: 1;
+  -webkit-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
 }
 
 .plan-section .planing-item.first-item {
@@ -12877,14 +12944,29 @@ footer.footer .footer-row .footer-item img.social-icon {
           transform: translateX(-10%);
 }
 
+.plan-section .planing-item.first-item:hover {
+  -webkit-transform: translateX(-10%) scale(1.1);
+          transform: translateX(-10%) scale(1.1);
+}
+
 .plan-section .planing-item.midle-item {
   -webkit-transform: translateY(20%);
           transform: translateY(20%);
 }
 
+.plan-section .planing-item.midle-item:hover {
+  -webkit-transform: translateY(20%) scale(1.1);
+          transform: translateY(20%) scale(1.1);
+}
+
 .plan-section .planing-item.last-item {
   -webkit-transform: translateX(10%) translateY(7.5%);
           transform: translateX(10%) translateY(7.5%);
+}
+
+.plan-section .planing-item.last-item:hover {
+  -webkit-transform: translateX(10%) translateY(7.5%) scale(1.1);
+          transform: translateX(10%) translateY(7.5%) scale(1.1);
 }
 
 .plan-section .planing-item img.main-img {
@@ -12893,12 +12975,14 @@ footer.footer .footer-row .footer-item img.social-icon {
   margin: 0 auto;
   -webkit-filter: drop-shadow(0px 10px 5px #ffe75e80);
           filter: drop-shadow(0px 10px 5px #ffe75e80);
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 
 .plan-section .planing-item .text {
   display: block;
   width: 100%;
-  margin: 25px 0;
+  margin: 25px 0 5px;
   text-align: center;
 }
 
@@ -12930,6 +13014,7 @@ footer.footer .footer-row .footer-item img.social-icon {
 
 .showcase-section .thumbnail {
   position: absolute;
+  z-index: 10;
   width: 100%;
   height: 150px;
   left: 0;
@@ -12945,9 +13030,21 @@ footer.footer .footer-row .footer-item img.social-icon {
   background: #ffffff50;
   margin: 0px;
   float: left;
+  cursor: pointer;
 }
 
-.showcase-section .thumbnail .item.active {
+.showcase-section .thumbnail .item img.img-client {
+  position: relative;
+  width: 50%;
+}
+
+.showcase-section .thumbnail span#active-thumbnail {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  bottom: 0;
+  width: calc(100% / 6);
+  height: 15px;
   background: #dbff3d;
 }
 
@@ -12970,6 +13067,19 @@ footer.footer .footer-row .footer-item img.social-icon {
 .showcase-section .main-slide .slide-item img.logo {
   position: absolute;
   width: 150px;
+}
+
+.showcase-section .main-slide .slide-item img.main-img {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  opacity: .7;
+  -webkit-filter: drop-shadow(10px 10px 20px #21212130);
+          filter: drop-shadow(10px 10px 20px #21212130);
 }
 
 #about-us {
