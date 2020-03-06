@@ -11442,18 +11442,6 @@ footer.footer .footer-row .footer-item img.social-icon {
   pointer-events: none;
 }
 
-.client-area-section-1 {
-  position: absolute;
-  top: 65%;
-  left: 7.5%;
-  z-index: 5;
-}
-
-.client-area-section-1 .item {
-  height: 50px;
-  margin-left: 20px;
-}
-
 .opening {
   position: absolute;
   font-size: 10em;
@@ -13082,6 +13070,166 @@ footer.footer .footer-row .footer-item img.social-icon {
           filter: drop-shadow(10px 10px 20px #21212130);
 }
 
+.home-section .opening-text {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  width: 40%;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: -1px;
+}
+
+.home-section .client-area-section-1 {
+  position: absolute;
+  bottom: 7.5%;
+  left: 50%;
+  z-index: 5;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 90px;
+  white-space: nowrap;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.home-section .client-area-section-1 .item {
+  height: 100%;
+  padding: 15px 25px;
+}
+
+.home-section .opening-start-btn {
+  border: none;
+  font-size: 16px;
+  padding: 10px 25px;
+  position: absolute;
+  left: 50%;
+  bottom: calc(5% + 150px);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #dbff3d;
+  cursor: pointer;
+  text-align: left;
+  width: 136px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 0px 0px #21212170;
+          box-shadow: 0px 0px 0px 0px #21212170;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.home-section .opening-start-btn .next {
+  height: 20px;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.home-section .opening-start-btn:hover {
+  width: 160px;
+  -webkit-box-shadow: 10px 0px 0px 0px #212121;
+          box-shadow: 10px 0px 0px 0px #212121;
+}
+
+.home-section .opening-start-btn:hover .next {
+  right: 15px;
+  opacity: 1;
+}
+
+.home-section .title-wrapper {
+  position: absolute;
+  top: 45%;
+  overflow: hidden;
+}
+
+.home-section .title-wrapper.main {
+  left: 50%;
+  -webkit-transform: translateX(-95%) translateY(-50%) skewX(-25deg);
+          transform: translateX(-95%) translateY(-50%) skewX(-25deg);
+  width: 530px;
+}
+
+.home-section .title-wrapper h1.home-title {
+  font-size: 260px;
+  color: #dbff3d;
+  letter-spacing: -20px;
+  z-index: 10;
+  text-align: center;
+  -webkit-transform: skewX(25deg);
+          transform: skewX(25deg);
+}
+
+.home-section .title-wrapper.reverse {
+  right: 50%;
+  -webkit-transform: skewX(-25deg) translateX(95%) translateY(-30%);
+          transform: skewX(-25deg) translateX(95%) translateY(-30%);
+  width: 530px;
+}
+
+.home-section .title-wrapper.reverse h1.home-title {
+  -webkit-transform: skewX(25deg) translateX(-100%);
+          transform: skewX(25deg) translateX(-100%);
+}
+
+.home-section #section-one {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  z-index: -1;
+}
+
+.home-section #section-one span.home-conveti {
+  position: relative;
+  width: calc(100vw / 9);
+  height: calc(100vw / 9);
+  background: #f7f7f7;
+  -webkit-box-shadow: 5px 5px 20px 15px #9e9b9b09;
+          box-shadow: 5px 5px 20px 15px #9e9b9b09;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.home-section #section-one span.home-conveti.radius-1 {
+  border-radius: 100px;
+}
+
+.home-section #section-one span.home-conveti.radius-2 {
+  border-radius: 100px 100px 0 0;
+}
+
+.home-section #section-one span.home-conveti.radius-3 {
+  border-radius: 100px 100px 100px 0;
+}
+
+.home-section #section-one span.home-conveti.radius-4 {
+  border-radius: 100px 0 0 0;
+}
+
+.home-section #section-one span.home-conveti.radius-5 {
+  border-radius: 0 100px 0 0;
+}
+
+.home-section #section-one span.home-conveti.radius-6 {
+  border-radius: 0;
+}
+
+.home-section #section-one span.home-conveti.radius-7 {
+  border-radius: 0 0 100px 0;
+}
+
+.home-section #section-one span.home-conveti.radius-7 {
+  border-radius: 0 0 0 100px;
+}
+
 #about-us {
   background: #f9f9f9 !important;
 }
@@ -14032,5 +14180,10 @@ body {
 .img-responsive {
   display: block;
   width: 100%;
+}
+
+h1.logo-angkods.gilroy-bold {
+  font-size: 20em;
+  letter-spacing: -30px;
 }
 /*# sourceMappingURL=style.css.map */

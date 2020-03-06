@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>angkods</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/85508c1dc0.js"></script>
+    
+</head> 
+<body>
+    <nav class="navbar navbar-light justify-content-between fixed-top" id="main-navbar">
+        <div class="container">
+            <!-- <a class="navbar-brand fredoka text-primary">Angko<span class="text-danger">ds</span></a> -->
+            <a class="navbar-brand fredoka text-primary">
+                <img src="https://www.comscore.com/content/download/43762/2490620/file/Comscore_Logo_Color_1028px.png" alt="" style="height: 40px;">
+            </a>
+            
+            <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#partnership">Our partner</a></li>
+                <li class="nav-item"><a href="#about-us">Why us</a></li>
+                <li class="nav-item"><a href="#plan">Plan</a></li>
+                <li class="nav-item"><a href="#show-case">Show case</a></li>
+                <li class="nav-item"><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="page-section mh-100 intro-section home-section" id="home">
+
+        <h1 class="opening-text gilroy">Smart boosting your business product campaign.</h1>
+        <button class="opening-start-btn gilroy-bold">
+            Get started
+            <img src="../img/png/next.png" alt="" class="next">
+        </button>
+
+        <div class="client-area-section-1" id="section-1-clinet-area">
+            <img src="https://seeklogo.com/images/U/uber-eats-logo-CA3BA2098B-seeklogo.com.png" alt="" class="item">
+            <img src="https://www.easybiz.id/wp-content/uploads/2019/05/logo-narasi-tv.png" alt="" class="item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/800px-CNN.svg.png" alt="" class="item">
+            <img src="https://www.bukalapak.com/images/new-brand-identity/1-logo-salah/logo_salah_8.png" alt="" class="item">
+            <img src="https://www.festisite.com/static/partylogo/img/logos/dominos_pizza.png" alt="" class="item">
+        </div>
+
+        <!-- <div class="title-wrapper gilroy-bold main">
+            <h1 class="home-title ">angkods.</h1>
+        </div>
+
+        <div class="title-wrapper gilroy-bold reverse">
+            <h1 class="home-title ">angkods.</h1>
+        </div> -->
+        <div id="section-one" class="d-flex justify-content-between">
+        </div>
+    </div>
+
+    <script>
+        var sOne = document.getElementById("section-one");
+
+        for (let index = 0; index < 60; index++) {
+            var span = document.createElement("span");
+            span.setAttribute("class", `home-conveti radius-${Math.floor(Math.random() * 10)}`);
+            span.setAttribute("style", `z-index : ${Math.floor(Math.random() * 10)}`);
+            sOne.appendChild(span);
+        }
+         
+        var x = setInterval(function(){
+            updateConvety();
+        }, 5000);
+
+        x;
+
+        function updateConvety(){
+            var item = sOne.querySelectorAll(".home-conveti");
+            item.forEach(function(el , i){
+                el.setAttribute("class", `home-conveti radius-${Math.floor(Math.random() * 10)}`);
+                el.setAttribute("style", `z-index : ${Math.floor(Math.random() * 10)}`);
+            })
+        }
+    </script>
+</body>
+</html>
