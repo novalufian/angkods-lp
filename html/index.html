@@ -37,44 +37,39 @@
         </div>
     </nav>
     
-    <div class="page-section mh-100 bg-info intro-section" id="home">
-        <h1 class="shadow-text-big righteous">angkods</h1>
+    <div class="page-section mh-100 intro-section home-section" id="home">
         
-        <!-- section 1  -->
-        <!--  
-            <h1 class="big-title text-dark fredoka" id="section-1-big-title" >tell to people about <br> your brand.</h1>
-            <div class="big-image d-flex justify-content-center" id="section-1-big-img">
-                <div class="main-big-img bg-white">
-                    <img src="https://loremflickr.com/cache/resized/65535_48295833796_ad1c523187_h_400_700_nofilter.jpg" alt="">
-                    
-                    <div class="bg-shadow"></div>
-                </div>
-            </div>
-            <button class="btn btn-danger btn-rounded btn-getstarted fredoka">
-                Get started
-            </button>   
-            <div class="client-area-section-1">
-                <img src="https://scontent.cdninstagram.com/vp/45b609f9e567d5dc28445e698f7f4abf/5DE5D8F3/t51.2885-15/e35/s480x480/65839968_131980291377914_8537292957899595531_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com" alt="" class="item">
-                <img src="http://www.corrigansports.com/wp-content/uploads/2019/01/honda-logo.jpg" alt="" class="item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/800px-CNN.svg.png" alt="" class="item">
-                <img src="https://i.pinimg.com/originals/07/0d/3e/070d3e118fa9bcf14bf6a1004308c91b.jpg" alt="" class="item">
-                <img src="https://www.festisite.com/static/partylogo/img/logos/dominos_pizza.png" alt="" class="item">
-            </div>
-        -->
-        <!-- section 2 starded -->
-        <!-- bg warning -->
-        <h1 class="opening righteous d-flex flex-column align-items-center justify-content-center w900 ">
-            <span class="text-white greating">Welcome <span>to</span></span>
-            <span class="text-white greating">Angkods</span>
-        </h1>
+        <h1 class="opening-text gilroy">Smart boosting your business product campaign.</h1>
+        <button class="opening-start-btn gilroy-bold">
+            Get started
+            <img src="../img/png/next.png" alt="" class="next">
+        </button>
         
-        <!-- section 3 -->
+        <div class="client-area-section-1" id="section-1-clinet-area">
+            <img src="https://seeklogo.com/images/U/uber-eats-logo-CA3BA2098B-seeklogo.com.png" alt="" class="item">
+            <img src="https://www.easybiz.id/wp-content/uploads/2019/05/logo-narasi-tv.png" alt="" class="item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/800px-CNN.svg.png" alt="" class="item">
+            <img src="https://www.bukalapak.com/images/new-brand-identity/1-logo-salah/logo_salah_8.png" alt="" class="item">
+            <img src="https://www.festisite.com/static/partylogo/img/logos/dominos_pizza.png" alt="" class="item">
+        </div>
         
-        <!-- section 4 -->
-        <!-- <div class="ads-banner righteous d-flex justify-content-center align-items-center">
-            <p class="text-white">ads</p>
+        <div class="show-card">
+            <!-- <p class="gilroy-bold">unit angkods</p> -->
+            <!-- <img src="../img/angkods.png" alt="" class="main-img"> -->
+            <!-- <div class="footer"></div> -->
+            <!-- <p class="gilroy desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+        </div>
+        <div class="show-card pie"></div>
+        
+        <!-- <div class="title-wrapper gilroy-bold main">
+            <h1 class="home-title ">angkods.</h1>
+        </div>
+        
+        <div class="title-wrapper gilroy-bold reverse">
+            <h1 class="home-title ">angkods.</h1>
         </div> -->
-        
+        <div id="section-one" class="d-flex justify-content-between">
+        </div>
     </div>
     
     <div class="page-section bg-white partnership-section d-flex flex-row align-items-center" id="partnership">
@@ -356,6 +351,30 @@
             
             // console.log(t + " "+ rect.bottom + " "+rect.height)
             
+        }
+        
+        
+        var sOne = document.getElementById("section-one");
+        
+        for (let index = 0; index < 60; index++) {
+            var span = document.createElement("span");
+            span.setAttribute("class", `home-conveti radius-${Math.floor(Math.random() * 10)}`);
+            span.setAttribute("style", `z-index : ${Math.floor(Math.random() * 10)}`);
+            sOne.appendChild(span);
+        }
+        
+        var updateShapeSectionOne = setInterval(function(){
+            updateConvety();
+        }, 2500);
+        
+        updateShapeSectionOne;
+        
+        function updateConvety(){
+            var item = sOne.querySelectorAll(".home-conveti");
+            item.forEach(function(el , i){
+                el.setAttribute("class", `home-conveti radius-${Math.floor(Math.random() * 10)}`);
+                el.setAttribute("style", `z-index : ${Math.floor(Math.random() * 10)}`);
+            })
         }
     </script>
     

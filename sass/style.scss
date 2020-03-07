@@ -27,27 +27,27 @@
 
 // https://tinkov.info/gilroy.html
 
-$blue:    #0a4a8f !default;
+$blue:    #116BFE !default;
 $indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
+$purple:  #614ad3 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
+$red:     #f30e5c !default;
 $orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
+$yellow:  #ffd933 !default;
+$green:   #00bd56 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
 $theme-colors: (
     // "primary":    #0074e4,
-    "purple":    #614ad3,
-    "primary" :   #116BFE,
+    "purple":    $purple,
+    "primary" :   $blue,
     // "secondary":  #b0b0b0 ,
     "secondary" : #9CA3C0,
-    "success":    #00bd56,
+    "success":    $green,
     "info":       #93deff,
-    "warning":    #ffd933,
-    "danger":     #f30e5c,
+    "warning":    $yellow,
+    "danger":     $red,
     "white":     #ffffff,
     "light":      $light,
     "dark":       #3D425E
