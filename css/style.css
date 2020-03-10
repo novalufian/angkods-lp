@@ -13276,6 +13276,7 @@ footer.footer .footer-row .footer-item img.social-icon {
   border-radius: 0;
   -webkit-box-shadow: unset;
           box-shadow: unset;
+  z-index: 0 !important;
 }
 
 .home-section #section-one span.home-conveti.radius-7 {

@@ -1846,6 +1846,7 @@
             &.radius-6{
                 border-radius: 0;
                 box-shadow: unset;
+                z-index : 0 !important;
             }
 
             &.radius-7{
